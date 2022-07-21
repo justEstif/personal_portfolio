@@ -1,0 +1,19 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/main.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/main.css",
+    "serve": "live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.2",
+    "prettier-plugin-tailwind": "^2.2.12",
+    "tailwindcss": "^3.1.4"
+  }
+}
