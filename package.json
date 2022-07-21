@@ -6,13 +6,13 @@
   "scripts": {
     "watch": "tailwindcss -i ./src/input.css -o ./dist/main.css --watch",
     "build": "tailwindcss -i ./src/input.css -o ./dist/main.css",
-    "serve": "live-server"
+    "serve": "five-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "live-server": "^1.2.2",
+    "five-server": "^0.1.4",
     "prettier-plugin-tailwind": "^2.2.12",
     "tailwindcss": "^3.1.4"
   }
