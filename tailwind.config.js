@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'split-white-cyan': "linear-gradient(140deg, #06b6d4 60% , white 40%);"
+        'split-white-cyan': "linear-gradient(145deg, rgba(6,182,212,1) 70% , rgba(255,255,255,1) 0%);"
       }
     }
   }
