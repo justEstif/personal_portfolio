@@ -11,11 +11,14 @@
   <title>Personal Portfolio</title>
 </head>
 
-<body class="grid grid-rows-3 gap-4 bg-black-red bg-center bg-cover">
+<body class="flex flex-col items-center justify-center md:grid grid-rows-3 md:gap-4 bg-black-red bg-center bg-cover max-w-6xl md:mx-auto">
 
-  <header class="px-0 md:px-10 max-w-screen-xl mx-auto">
-    <img src="assets/small-2.jpg" alt="" class="float-left p-10 max-w-md">
-    <div class="text-white p-10">
+  <!-- <header class="px-0 md:px-10 max-w-screen-xl mx-auto"> -->
+  <header class="md:grid md:grid-cols-2">
+    <div class="md:flex md:justify-center md:items-center">
+      <img src="assets/small-2.jpg" alt="" class="md:float-right md:p-10 max-w-md">
+    </div>
+    <div class="text-white mx-10 px-10 md:p-10 md:flex md:flex-col md:items-start md:justify-center">
       <h1>About Me</h1>
       <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem
         pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud
@@ -25,40 +28,133 @@
         cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
         eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat
         ullamco ut ea consectetur et est culpa et culpa duis.</p>
-      <div>
-        icon1
-        icon2
-        icon3
+      <div class="flex justify-center items-center gap-6 py-5 text-white text-4xl">
+        <i class="fab fa-github"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-twitter"></i>
       </div>
     </div>
   </header>
 
-  <main class="max-w-screen-xl mx-auto">
+  <main class="max-w-screen-xl mx-auto max-h-min">
     <h1>My Work</h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <p>Project</p>
-      <p>Project</p>
-      <p>Project</p>
-      <p>Project</p>
-      <p>Project</p>
-      <p>Project</p>
+    <div class="md:grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Project Temp Start -->
+      <div class="my-8 max-w-[250px]">
+        <div class="relative bg-purple-800/70 p-28">
+          <p
+            class="font-serif text-4xl text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 drop-shadow-md text-center">
+            screenshot of project
+          </p>
+        </div>
+
+        <div class="pb-10 bg-gray-300">
+          <div class="flex justify-around items-center px-5 py-2">
+            <p class="font-serif text-xl">Project name</p>
+            <p class="flex justify-center gap-3">
+              <i class="fab fa-github text-lg"></i>
+              <i class="fas fa-external-link-alt text-lg"></i>
+            </p>
+          </div>
+          <p class="px-3 text-gray-600">Short description of the project. Just a couple sentences will do.</p>
+        </div>
+      </div>
+      <!-- Project Temp end -->
+      <!-- Project Temp Start -->
+      <div class="my-8 max-w-[250px]">
+        <div class="relative bg-purple-800/70 p-28">
+          <p
+            class="font-serif text-4xl text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 drop-shadow-md text-center">
+            screenshot of project
+          </p>
+        </div>
+
+        <div class="pb-10 bg-gray-300">
+          <div class="flex justify-around items-center px-5 py-2">
+            <p class="font-serif text-xl">Project name</p>
+            <p class="flex justify-center gap-3">
+              <i class="fab fa-github text-lg"></i>
+              <i class="fas fa-external-link-alt text-lg"></i>
+            </p>
+          </div>
+          <p class="px-3 text-gray-600">Short description of the project. Just a couple sentences will do.</p>
+        </div>
+      </div>
+      <!-- Project Temp end -->
+      <!-- Project Temp Start -->
+      <div class="my-8 max-w-[250px]">
+        <div class="relative bg-purple-800/70 p-28">
+          <p
+            class="font-serif text-4xl text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 drop-shadow-md text-center">
+            screenshot of project
+          </p>
+        </div>
+
+        <div class="pb-10 bg-gray-300">
+          <div class="flex justify-around items-center px-5 py-2">
+            <p class="font-serif text-xl">Project name</p>
+            <p class="flex justify-center gap-3">
+              <i class="fab fa-github text-lg"></i>
+              <i class="fas fa-external-link-alt text-lg"></i>
+            </p>
+          </div>
+          <p class="px-3 text-gray-600">Short description of the project. Just a couple sentences will do.</p>
+        </div>
+      </div>
+      <!-- Project Temp end -->
+      <!-- Project Temp Start -->
+      <div class="my-8 max-w-[250px]">
+        <div class="relative bg-purple-800/70 p-28">
+          <p
+            class="font-serif text-4xl text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 drop-shadow-md text-center">
+            screenshot of project
+          </p>
+        </div>
+
+        <div class="pb-10 bg-gray-300">
+          <div class="flex justify-around items-center px-5 py-2">
+            <p class="font-serif text-xl">Project name</p>
+            <p class="flex justify-center gap-3">
+              <i class="fab fa-github text-lg"></i>
+              <i class="fas fa-external-link-alt text-lg"></i>
+            </p>
+          </div>
+          <p class="px-3 text-gray-600">Short description of the project. Just a couple sentences will do.</p>
+        </div>
+      </div>
+      <!-- Project Temp end -->
+
     </div>
   </main>
 
-  <footer class="px-0 md:px-10 max-w-screen-xl mx-auto">
-    <img src="assets/small-1.jpg" alt="" class="float-right p-10 max-w-md">
-    <div class="text-white p-10">
-      <h1>Contact Me</h1>
-      <p>Please get in touch if you think our work could be mutually beneficial!</p>
-      <p>1234 Random Road</p>
-      <p>Random Town, Random State 12345</p>
-      <p>icon number</p>
-      <p>icon email</p>
-      <div>
-        icon1
-        icon2
-        icon3
+  <footer class="md:grid md:grid-cols-2">
+    <div class="text-white md:p-10 flex flex-col items-end justify-center">
+      <div class="px-20 md:px-0">
+        <h1>Contact Me</h1>
+        <p>Please get in touch if you think our work could be mutually beneficial!</p>
+        <p>1234 Random Road</p>
+        <p>Random Town, Random State 12345</p>
+
+        <p class="flex items-center">
+          <i class="fas fa-phone-alt  hidden md:block"></i>
+          <span class="hidden md:block">&nbsp;</span>555-555-5555
+        </p>
+        <p class="flex items-center">
+          <i class="far fa-envelope hidden md:block"></i>
+          <span class="hidden md:block">&nbsp;</span>ashleywilliams.is.not.real@gmail.com
+        </p>
+
+        <div class="flex justify-center md:justify-start items-center gap-6 py-5 text-white text-4xl">
+          <i class="fab fa-github"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
       </div>
+    </div>
+
+    <div class="md:flex md:justify-center md:items-center">
+      <img src="assets/small-1.jpg" alt="" class="md:float-right md:p-10 max-w-md">
     </div>
   </footer>
 
