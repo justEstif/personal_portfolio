@@ -8,8 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'split-white-cyan': "linear-gradient(145deg, rgba(6,182,212,1) 70% , rgba(255,255,255,1) 0%);",
-        'math-coor': "url('/assets/math-coor.webp')",
+        'black-red': "url('/assets/black-red.png')",
       }
     }
   }
