@@ -1,4 +1,5 @@
-import motion from './motion'
+"use client";
+import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 
 type Props = {};
@@ -6,8 +7,6 @@ type Props = {};
 const Header = ({}: Props) => {
   return (
     <header className="flex sticky top-0 z-20 justify-between items-start p-5 mx-auto max-w-7xl xl:items-center">
-      {/* TODO: Add transition to the navbar */}
-
       <motion.div
         initial={{
           x: -500,
@@ -58,7 +57,6 @@ const Header = ({}: Props) => {
         className="flex flex-row items-center text-green-300 cursor-pointer"
       >
         <SocialIcon
-          // TODO: Remove the cursor-pointer
           className="cursor-pointer"
           network="email"
           fgColor="gray"
