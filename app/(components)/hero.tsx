@@ -24,17 +24,17 @@ function Hero({ }: Props) {
         <Typewriter />
 
         <div className="pt-5 space-x-3">
-          <Link href="#about">
-            <button className="hero-btn">About</button>
+          <Link href="/#about" className="hero-link">
+            About
           </Link>
-          <Link href="#experience">
-            <button className="hero-btn">Experience</button>
+          <Link href="/#experience" className="hero-link">
+            Experience
           </Link>
-          <Link href="#skills">
-            <button className="hero-btn">Skills</button>
+          <Link href="/#skills" className="hero-link">
+            Skills
           </Link>
-          <Link href="#projects">
-            <button className="hero-btn">Projects</button>
+          <Link href="/#projects" className="hero-link">
+            Projects
           </Link>
         </div>
       </div>
