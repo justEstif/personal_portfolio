@@ -1,4 +1,4 @@
-import './global.css'
+import "./global.css";
 
 export default function RootLayout({
   children,
@@ -12,6 +12,7 @@ export default function RootLayout({
         <meta name="description" content="Estifanos's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </head>
+      {/* TODO: Add navbar here */}
       <body>{children}</body>
     </html>
   );
