@@ -17,8 +17,8 @@ function Typewriter({}: Props) {
   });
 
   return (
-    <h1>
-      <span>{text}</span>
+    <h1 className="text-5xl font-semibold lg:text-6xl">
+      <span className="mr-3">{text}</span>
       <Cursor cursorColor="red" />
     </h1>
   );
