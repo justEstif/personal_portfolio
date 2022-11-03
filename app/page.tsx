@@ -1,4 +1,5 @@
 import About from "./(components)/about";
+import Experience from "./(components)/experience";
 import Header from "./(components)/header";
 import Hero from "./(components)/hero";
 
@@ -11,6 +12,9 @@ export default function Page() {
       </section>
       <section id="about" className="snap-center">
         <About />
+      </section>
+      <section id="experience" className="snap-center">
+        <Experience />
       </section>
     </div>
   );
