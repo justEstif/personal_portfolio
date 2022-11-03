@@ -1,4 +1,5 @@
 "use client";
+
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
 
@@ -28,7 +29,6 @@ const Header = ({}: Props) => {
           fgColor="gray"
           bgColor="transparent"
         />
-
         <SocialIcon
           url="https://youtube.com/jaketrent"
           fgColor="gray"

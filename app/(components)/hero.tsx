@@ -1,12 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import BackgroundCircles from "./backgroundCircles";
 import Typewriter from "./typewriter";
 
 type Props = {};
 
-function Hero({ }: Props) {
+function Hero({}: Props) {
   return (
     <div className="flex overflow-hidden flex-col justify-center items-center space-y-8 h-screen text-center">
       <BackgroundCircles />
@@ -24,18 +23,19 @@ function Hero({ }: Props) {
         <Typewriter />
 
         <div className="pt-5 space-x-3">
-          <Link href="/#about" className="hero-link">
+          {/* TODO: Use Link instead of a tab */}
+          <a href="#about" className="hero-link">
             About
-          </Link>
-          <Link href="/#experience" className="hero-link">
+          </a>
+          <a href="#experience" className="hero-link">
             Experience
-          </Link>
-          <Link href="/#skills" className="hero-link">
+          </a>
+          <a href="#skills" className="hero-link">
             Skills
-          </Link>
-          <Link href="/#projects" className="hero-link">
+          </a>
+          <a href="#projects" className="hero-link">
             Projects
-          </Link>
+          </a>
         </div>
       </div>
     </div>
