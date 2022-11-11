@@ -1,4 +1,5 @@
 import About from "./(components)/about";
+import ContactMe from "./(components)/contactMe";
 import Experience from "./(components)/experience";
 import Header from "./(components)/header";
 import Hero from "./(components)/hero";
@@ -23,6 +24,9 @@ export default function Page() {
       </section>
       <section id="projects" className="snap-center">
         <Projects />
+      </section>
+      <section id="contact" className="snap-center">
+        <ContactMe />
       </section>
     </div>
   );

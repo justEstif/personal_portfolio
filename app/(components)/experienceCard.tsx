@@ -5,7 +5,7 @@ import Image from "next/image";
 
 type Props = {};
 
-function ExperienceCard({}: Props) {
+function ExperienceCard({ }: Props) {
   return (
     <article className="flex overflow-hidden flex-col flex-shrink-0 items-center p-10 space-y-7 rounded-lg opacity-40 transition-opacity duration-200 hover:opacity-100 w-[500px] snap-center bg-stone-700/30 md:w-[600px] xl:w-[900px]">
       <motion.img
