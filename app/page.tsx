@@ -8,7 +8,7 @@ import Skills from "./(components)/skills";
 
 export default function Page() {
   return (
-    <div className="overflow-scroll z-0 h-screen text-white bg-stone-800 snap-y snap-mandatory">
+    <div className="overflow-scroll z-0 h-screen text-white bg-stone-800 snap-y snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-yellow-200">
       <Header />
       <section id="hero" className="snap-start">
         <Hero />
