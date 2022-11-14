@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles/globals.css"
+import "../styles/globals.css";
+import NavItem from "./(components)/navItem";
 
 type Props = {
   children: React.ReactNode;
@@ -7,8 +8,11 @@ type Props = {
 
 function RootLayout({ children }: Props) {
   return (
-    <html lang="en" className='bg-gray-50 dark:bg-gray-900'>
-      <body>{children}</body>
+    <html lang="en" className="bg-gray-50 dark:bg-gray-900">
+      <body>
+        <NavItem href="/" text="Home" />
+        {children}
+      </body>
     </html>
   );
 }
