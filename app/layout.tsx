@@ -1,5 +1,6 @@
 import React from "react";
 import "styles/globals.css"; // tailwind
+import Footer from "./(components)/footer";
 import NavBar from "./(components)/navBar";
 
 type Props = {
@@ -15,7 +16,7 @@ function RootLayout({ children }: Props) {
       >
         <NavBar />
         {children}
-        Add footer here
+        <Footer />
       </body>
     </html>
   );
