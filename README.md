@@ -1,34 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+```jsx
+<div className="flex flex-col justify-center px-8">
+  <nav className="flex relative justify-between items-center pt-8 pb-8 mx-auto w-full max-w-2xl text-gray-900 bg-gray-50 bg-opacity-60 border-gray-200 sm:pb-16 dark:text-gray-100 dark:bg-gray-900 dark:border-gray-700">
+    <a href="#skip" className="skip-nav">
+      Skip to content
+    </a>
+    <div className="ml-[-0.60rem]">
+      <MobileMenu />
+      <NavItem href="/" text="Home" />
+      <NavItem href="/guestbook" text="Guestbook" />
+      <NavItem href="/dashboard" text="Dashboard" />
+      <NavItem href="/blog" text="Blog" />
+      <NavItem href="/snippets" text="Snippets" />
+    </div>
+    <button
+      aria-label="Toggle Dark Mode"
+      type="button"
+      className="flex justify-center items-center w-9 h-9 bg-gray-200 rounded-lg ring-gray-300 transition-all dark:bg-gray-600 hover:ring-2"
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+    >
+      {mounted && (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          className="w-5 h-5 text-gray-800 dark:text-gray-200"
+        >
+          {resolvedTheme === "dark" ? (
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
+          ) : (
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
+          )}
+        </svg>
+      )}
+    </button>
+  </nav>
+</div>
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
