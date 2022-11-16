@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import cn from "classnames";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGripLines, faTimes } from "@fortawesome/free-solid-svg-icons";
 import useDelayedRender from "@/hooks/useDelayedRender";
 import styles from "styles/mobile-menu.module.css";
 
@@ -33,6 +35,7 @@ function MobileMenu({}: Props) {
         document.body.style.overflow = "";
       }
   );
+
   return (
     <>
       <button
@@ -41,8 +44,20 @@ function MobileMenu({}: Props) {
         type="button"
         onClick={toggleMenu}
       >
-        <MenuIcon data-hide={isMenuOpen} />
-        <CrossIcon data-hide={!isMenuOpen} />
+        <FontAwesomeIcon
+          icon={faGripLines}
+          className={cn(
+            !isMenuOpen ? "block" : "hidden",
+            "absolute w-5 h-5 text-gray-900 dark:text-gray-100"
+          )}
+        />
+        <FontAwesomeIcon
+          icon={faTimes}
+          className={cn(
+            isMenuOpen ? "block" : "hidden",
+            "absolute w-5 h-5 text-gray-900 dark:text-gray-100"
+          )}
+        />
       </button>
       {isMenuMounted && (
         <ul
@@ -72,8 +87,16 @@ function MobileMenu({}: Props) {
             className="text-sm font-semibold text-gray-900 border-b border-gray-300 dark:text-gray-100 dark:border-gray-700"
             style={{ transitionDelay: "200ms" }}
           >
-            <Link href="/Blog" className="flex pb-4 w-auto">
+            <Link href="/blog" className="flex pb-4 w-auto">
               Blog
+            </Link>
+          </li>
+          <li
+            className="text-sm font-semibold text-gray-900 border-b border-gray-300 dark:text-gray-100 dark:border-gray-700"
+            style={{ transitionDelay: "200ms" }}
+          >
+            <Link href="/about" className="flex pb-4 w-auto">
+              About
             </Link>
           </li>
         </ul>
@@ -83,52 +106,3 @@ function MobileMenu({}: Props) {
 }
 
 export default MobileMenu;
-
-function MenuIcon(props: JSX.IntrinsicElements["svg"]) {
-  return (
-    <svg
-      className="absolute w-5 h-5 text-gray-900 dark:text-gray-100"
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      {...props}
-    >
-      <path
-        d="M2.5 7.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M2.5 12.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function CrossIcon(props: JSX.IntrinsicElements["svg"]) {
-  return (
-    <svg
-      className="absolute w-5 h-5 text-gray-900 dark:text-gray-100"
-      viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-      shapeRendering="geometricPrecision"
-      {...props}
-    >
-      <path d="M18 6L6 18" />
-      <path d="M6 6l12 12" />
-    </svg>
-  );
-}
