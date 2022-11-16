@@ -22,7 +22,7 @@ function Greetings() {
         <h2 className="mb-4 text-gray-700 dark:text-gray-200">Title</h2>
         <p className="mb-16 text-gray-600 dark:text-gray-400">Subtitle</p>
       </div>
-      <div className="relative mr-auto mb-0 w-44 md:mb-8">
+      <div className="relative mr-auto mb-8 w-36 md:w-44">
         <Image
           alt="Avatar Image"
           height={176}
