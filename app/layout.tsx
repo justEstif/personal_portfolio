@@ -19,7 +19,6 @@ function RootLayout({ children }: Props) {
         <ThemeProvider>
           <NavBar />
           <main
-            id="skip"
             className={cn(
               "flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900",
               interVariable.className

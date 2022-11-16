@@ -5,7 +5,7 @@ type Props = {};
 function Head({}: Props) {
   const meta = {
     title: "Estifanos Beyene – Developer, Engineer.",
-    description: `Full-stack developer, Mountain Bike enthusiast`,
+    description: `Full-stack Developer, Mountain Bike Enthusiast`,
     image: "https://leerob.io/static/images/lee-banner.png",
     type: "website",
   };

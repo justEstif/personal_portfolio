@@ -22,14 +22,9 @@ function Footer({}: Props) {
           >
             About
           </Link>
-          <Link
-            href="/newsletter"
-            className="text-gray-500 transition hover:text-gray-600"
-          >
-            Newsletter
-          </Link>
         </div>
         <div className="flex flex-col space-y-4">
+          {/* TODO React logos */}
           <ExternalLink href="https://twitter.com/leeerob">
             Twitter
           </ExternalLink>
@@ -44,24 +39,6 @@ function Footer({}: Props) {
             className="text-gray-500 transition hover:text-gray-600"
           >
             Uses
-          </Link>
-          <Link
-            href="/guestbook"
-            className="text-gray-500 transition hover:text-gray-600"
-          >
-            Guestbook
-          </Link>
-          <Link
-            href="/snippets"
-            className="text-gray-500 transition hover:text-gray-600"
-          >
-            Snippets
-          </Link>
-          <Link
-            href="/tweets"
-            className="text-gray-500 transition hover:text-gray-600"
-          >
-            Tweets
           </Link>
         </div>
       </div>

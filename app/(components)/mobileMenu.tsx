@@ -64,56 +64,16 @@ function MobileMenu({}: Props) {
             className="text-sm font-semibold text-gray-900 border-b border-gray-300 dark:text-gray-100 dark:border-gray-700"
             style={{ transitionDelay: "175ms" }}
           >
-            <Link href="/guestbook" className="flex pb-4 w-auto">
-              Guestbook
+            <Link href="/projects" className="flex pb-4 w-auto">
+              Projects
             </Link>
           </li>
           <li
             className="text-sm font-semibold text-gray-900 border-b border-gray-300 dark:text-gray-100 dark:border-gray-700"
             style={{ transitionDelay: "200ms" }}
           >
-            <Link href="/dashboard" className="flex pb-4 w-auto">
-              Dashboard
-            </Link>
-          </li>
-          <li
-            className="text-sm font-semibold text-gray-900 border-b border-gray-300 dark:text-gray-100 dark:border-gray-700"
-            style={{ transitionDelay: "250ms" }}
-          >
-            <Link href="/blog" className="flex pb-4 w-auto">
+            <Link href="/Blog" className="flex pb-4 w-auto">
               Blog
-            </Link>
-          </li>
-          <li
-            className="text-sm font-semibold text-gray-900 border-b border-gray-300 dark:text-gray-100 dark:border-gray-700"
-            style={{ transitionDelay: "275ms" }}
-          >
-            <Link href="/snippets" className="flex pb-4 w-auto">
-              Snippets
-            </Link>
-          </li>
-          <li
-            className="text-sm font-semibold text-gray-900 border-b border-gray-300 dark:text-gray-100 dark:border-gray-700"
-            style={{ transitionDelay: "300ms" }}
-          >
-            <Link href="/newsletter" className="flex pb-4 w-auto">
-              Newsletter
-            </Link>
-          </li>
-          <li
-            className="text-sm font-semibold text-gray-900 border-b border-gray-300 dark:text-gray-100 dark:border-gray-700"
-            style={{ transitionDelay: "325ms" }}
-          >
-            <Link href="/tweets" className="flex pb-4 w-auto">
-              Tweets
-            </Link>
-          </li>
-          <li
-            className="text-sm font-semibold text-gray-900 border-b border-gray-300 dark:text-gray-100 dark:border-gray-700"
-            style={{ transitionDelay: "350ms" }}
-          >
-            <Link href="/uses" className="flex pb-4 w-auto">
-              Uses
             </Link>
           </li>
         </ul>
