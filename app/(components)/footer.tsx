@@ -8,7 +8,7 @@ type Props = {};
 
 function Footer({}: Props) {
   return (
-    <footer className="mx-auto mb-8 w-full max-w-2xl">
+    <footer className="my-8 mx-auto w-full max-w-2xl">
       <div className="flex space-x-4 md:gap-8 md:justify-start md:items-center md:space-y-0">
         <Link href="https://discord.com/users/justCozz#4245">
           <FontAwesomeIcon
