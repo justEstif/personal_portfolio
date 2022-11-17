@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import { TGreetings, greeting } from "./portfolio";
+import { greeting } from "./portfolio";
+import Greetings from "./(components)/greetings";
 
 type Props = {};
 
@@ -13,31 +13,41 @@ function Page({}: Props) {
 }
 export default Page;
 
-function Greetings(props: TGreetings) {
+function BlogPosts() {
   return (
-    <div className="flex flex-col-reverse justify-between items-start w-full sm:flex-row">
-      <div className="flex flex-col gap-4 w-full max-w-md">
-        <h1 className="mb-1 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
-          {props.name || "Name"}
-        </h1>
-        <h2 className="mb-4 text-gray-700 dark:text-gray-200">
-          {props.title || "Title"}
-        </h2>
-        <p className="mb-16 text-gray-600 dark:text-gray-400">
-          {props.subtitle || "Subtitle"}
-        </p>
-      </div>
-      <div className="relative mb-8">
-        <Image
-          alt={props.img.alt || "Img alt"}
-          height={176}
-          width={176}
-          src={props.img.src || "/avatar.jpg"}
-          sizes="30vw"
-          priority
-          className="rounded-full filter grayscale"
+    <>
+      <h3 className="mb-6 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
+        Featured Posts
+      </h3>
+      <div className="flex flex-col gap-6 md:flex-row">
+        <BlogPostCard
+          title="Past, Present, and Future of React State Management"
+          slug="react-state-management"
+          gradient="from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]"
         />
       </div>
-    </div>
+      <Link
+        href="/blog"
+        className="flex items-center mt-8 h-6 leading-7 text-gray-600 rounded-lg transition-all dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
+      >
+        <>
+          {"Read all posts"}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            className="ml-1 w-6 h-6"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M17.5 12h-15m11.667-4l3.333 4-3.333-4zm3.333 4l-3.333 4 3.333-4z"
+            />
+          </svg>
+        </>
+      </Link>
+    </>
   );
 }
