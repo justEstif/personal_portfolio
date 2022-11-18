@@ -91,9 +91,22 @@ module.exports = {
         },
       }),
     },
+
+    linearBorderGradients: ({}) => ({
+      colors: {
+        "light-blue": ["#6EE7B7", "#3B82F6", "#9333EA"],
+      },
+      background: {
+        "gray-50": "#F9FAFB",
+        "gray-900": "#111111",
+      },
+    }),
   },
   variants: {
     typography: ["dark"],
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwindcss-border-gradient-radius"),
+  ],
 };
