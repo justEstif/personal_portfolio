@@ -16,37 +16,8 @@ export const projects: TProjects = [
   {
     title: "Instagram Clone",
     slug: "instagram-clone",
-    gradient: "from-[#D8B4FE] to-[#818CF8]",
-    icon: faInstagram,
-  },
-  {
-    title: "Instagram Clone",
-    slug: "instagram-clone",
-    gradient: "from-[#D8B4FE] to-[#818CF8]",
-    icon: faInstagram,
-  },
-  {
-    title: "Instagram Clone",
-    slug: "instagram-clone",
-    gradient: "from-[#D8B4FE] to-[#818CF8]",
-    icon: faInstagram,
-  },
-  {
-    title: "Instagram Clone",
-    slug: "instagram-clone",
-    gradient: "from-[#D8B4FE] to-[#818CF8]",
-    icon: faInstagram,
-  },
-  {
-    title: "Instagram Clone",
-    slug: "instagram-clone",
-    gradient: "from-[#D8B4FE] to-[#818CF8]",
-    icon: faInstagram,
-  },
-  {
-    title: "Instagram Clone",
-    slug: "instagram-clone",
-    gradient: "from-[#D8B4FE] to-[#818CF8]",
+    gradient:
+      "border-gradient-br-light-blue-gray-50  dark:border-gradient-br-light-blue-gray-900",
     icon: faInstagram,
   },
 ];

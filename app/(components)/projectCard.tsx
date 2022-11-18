@@ -13,16 +13,11 @@ function ProjectCard({ slug, title, icon, gradient }: TProjectCard) {
         gradient
       )}
     >
-      <FontAwesomeIcon icon={projectIcon} className="w-16 h-16" />
+      <FontAwesomeIcon icon={icon} className="w-16 h-16" />
       <h4 className="text-lg font-medium tracking-tight text-gray-900 dark:text-gray-50">
         {title}
       </h4>
-        <p>Some project details</p>
-      <div>
-        {techIcons.map((techIcon) => (
-          <div key={nanoid()}>{<FontAwesomeIcon icon={techIcon} />}</div>
-        ))}
-      </div>
+      <p>Some project details</p>
     </Link>
   );
 }
