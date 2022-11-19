@@ -13,6 +13,7 @@ function Head({}: Props) {
   return (
     <>
       <title>{meta.title}</title>
+      <link rel="shortcut icon" href="/static/favicon.ico" />
       <meta name="robots" content="follow, index" />
       <meta content={meta.description} name="description" />
       <meta property="og:type" content={meta.type} />
