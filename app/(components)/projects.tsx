@@ -26,7 +26,7 @@ function Projects({}: Props) {
         className="flex items-center mt-8 h-6 leading-7 text-gray-600 rounded-lg transition-all dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
       >
         <>
-          {"See all projects"}
+          See all projects
           <FontAwesomeIcon icon={faArrowRightLong} className="ml-1 w-6 h-6" />
         </>
       </Link>
