@@ -23,3 +23,9 @@ export type TProjectCard = {
 };
 
 export type TProjects = TProjectCard[];
+
+export type TBlogCard = {
+  title: string;
+  slug: string;
+  date: Date;
+};
