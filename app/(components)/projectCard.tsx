@@ -1,10 +1,10 @@
 import React from "react";
 import cn from "classnames";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { TProjectCard } from "lib/types";
+import Image from "next/image";
 
-function ProjectCard({ slug, title, icon, gradient }: TProjectCard) {
+function ProjectCard({ slug, title, img, gradient }: TProjectCard) {
   return (
     <Link
       href={`/projects/${slug}`}
@@ -13,7 +13,7 @@ function ProjectCard({ slug, title, icon, gradient }: TProjectCard) {
         gradient
       )}
     >
-      <FontAwesomeIcon icon={icon} className="w-16 h-16" />
+      <Image src={img.src} alt={img.alt} width={200} height={200} />
       <h4 className="text-lg font-medium tracking-tight text-gray-900 dark:text-gray-50">
         {title}
       </h4>
