@@ -94,7 +94,9 @@ module.exports = {
 
     linearBorderGradients: ({}) => ({
       colors: {
-        "light-blue": ["#6EE7B7", "#3B82F6", "#9333EA"],
+        "green-purple": ["#6EE7B7", "#3B82F6", "#9333EA"],
+        "yellow-red": ["#FDE68A", "#FCA5A5", "#FECACA"],
+        "light-purple": ["#D8B4FE", "#818CF8"],
       },
       background: {
         "gray-50": "#F9FAFB",
