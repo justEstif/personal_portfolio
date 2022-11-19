@@ -1,5 +1,4 @@
-import { TGreetings, TProjects } from "lib/types";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { TFooter, TGreetings, TProjects } from "lib/types";
 
 export const greetings: TGreetings = {
   name: "Estifanos Beyene",
@@ -12,12 +11,18 @@ export const greetings: TGreetings = {
   },
 };
 
+export const footer: TFooter = {
+  github: "https://github.com/justEstif",
+};
 export const projects: TProjects = [
   {
-    title: "Instagram Clone",
-    slug: "instagram-clone",
+    title: "Name of Project",
+    slug: "project-slug",
+    img: {
+      src: "/projects/project.jpg", // in public/projects
+      alt: "Screenshot of project",
+    },
     gradient:
-      "border-gradient-br-light-blue-gray-50  dark:border-gradient-br-light-blue-gray-900",
-    icon: faInstagram,
+      "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
   },
 ];
