@@ -1,5 +1,3 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-
 export type TGreetings = {
   name: string;
   title: string;
@@ -10,11 +8,18 @@ export type TGreetings = {
   };
 };
 
+export type TFooter = {
+  github: string;
+};
+
 export type TProjectCard = {
   title: string;
   slug: string;
   gradient: string;
-  icon: IconDefinition;
+  img: {
+    src: string;
+    alt: string;
+  };
 };
 
 export type TProjects = TProjectCard[];

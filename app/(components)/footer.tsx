@@ -1,28 +1,53 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord, faGithub } from "@fortawesome/free-brands-svg-icons";
-
 import Link from "next/link";
+
+import { footer } from "../portfolio";
 
 type Props = {};
 
-function Footer({}: Props) {
+function Footer() {
   return (
-    <footer className="my-8 mx-auto w-full max-w-2xl">
-      <div className="flex space-x-4 md:gap-8 md:justify-start md:items-center md:space-y-0">
-        <Link href="https://discord.com/users/justCozz#4245">
-          <FontAwesomeIcon
-            icon={faDiscord}
-            className="w-7 h-7 bg-gray-50 md:w-10 md:h-10 dark:text-gray-500 dark:bg-gray-900"
-          />
-        </Link>
-
-        <Link href="https://github.com/justEstif">
-          <FontAwesomeIcon
-            icon={faGithub}
-            className="w-7 h-7 bg-gray-50 md:w-10 md:h-10 dark:text-gray-500 dark:bg-gray-900"
-          />
-        </Link>
+    <footer className="flex flex-col justify-center items-start mx-auto mb-8 w-full max-w-2xl">
+      <hr className="mb-8 w-full border-gray-200 dark:border-gray-800 border-1" />
+      <div className="grid grid-cols-1 gap-4 pb-16 w-full max-w-2xl sm:grid-cols-3">
+        <div className="flex flex-col space-y-4">
+          <Link
+            href="/"
+            className="text-gray-500 transition hover:text-gray-600"
+          >
+            Home
+          </Link>
+          <Link
+            href="/about"
+            className="text-gray-500 transition hover:text-gray-600"
+          >
+            About
+          </Link>
+        </div>
+        <div className="flex flex-col space-y-4">
+          <Link
+            className="text-gray-500 transition hover:text-gray-600"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={footer.github}
+          >
+            GitHub
+          </Link>
+        </div>
+        <div className="flex flex-col space-y-4">
+          <Link
+            href="/projects"
+            className="text-gray-500 transition hover:text-gray-600"
+          >
+            Projects
+          </Link>
+          <Link
+            href="/blog"
+            className="text-gray-500 transition hover:text-gray-600"
+          >
+            Blog
+          </Link>
+        </div>
       </div>
     </footer>
   );
