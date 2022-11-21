@@ -25,11 +25,14 @@ function Greetings() {
         </h2>
 
         <Link
-          className="flex gap-4 items-center mb-16 text-lg font-bold tracking-tight text-green-700 dark:text-green-300 hover:text-green-500 dark:hover:text-green-500"
+          className="flex gap-4 items-center mb-16 text-lg text-green-700 dark:text-green-300 hover:text-green-500 group dark:hover:text-green-500"
           href={`mailto:${greetings.email}`}
         >
-          <p>{"Let's get in touch"}</p>
-          <FontAwesomeIcon icon={faEnvelope} className="animate-bounce" />
+          <p className="font-bold tracking-wide">{"Let's get in touch"}</p>
+          <FontAwesomeIcon
+            icon={faEnvelope}
+            className="animate-bounce group-hover:animate-pulse"
+          />
         </Link>
       </div>
 
