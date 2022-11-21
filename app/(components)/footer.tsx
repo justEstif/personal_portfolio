@@ -5,7 +5,7 @@ type Props = {};
 
 function Footer({}: Props) {
   return (
-    <footer className="flex gap-8 justify-center items-start my-8 mx-auto w-full max-w-2xl">
+    <footer className="flex sticky gap-8 justify-center items-start my-8 mx-auto w-full max-w-2xl top-[100vh]">
       <Link href="/" className="text-gray-500 transition hover:text-gray-600">
         Home
       </Link>

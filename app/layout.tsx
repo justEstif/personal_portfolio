@@ -19,16 +19,18 @@ config.autoAddCss = false;
 
 function RootLayout({ children }: Props) {
   return (
-    <html lang="en">
+    <html lang="en" className="min-h-screen">
       <body
-        className={cn("bg-gray-50 dark:bg-gray-900", interVariable.className,)}
+        className={cn("bg-gray-50 dark:bg-gray-900", interVariable.className)}
       >
         <ThemeProvider>
-          <NavBar />
-          <main className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900">
-            {children}
-          </main>
-          <Footer />
+          <div className="min-h-screen">
+            <NavBar />
+            <main className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
