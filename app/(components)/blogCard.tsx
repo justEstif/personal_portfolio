@@ -1,13 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import { TBlogCard } from "lib/types";
+import { shortenDate } from "lib/utils";
 
 function BlogCard({ slug, title, date }: TBlogCard) {
-  const dd = new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "2-digit",
-  });
   return (
     <Link
       href={`/blog/${slug}`}
@@ -22,8 +18,8 @@ function BlogCard({ slug, title, date }: TBlogCard) {
             {title}
           </h4>
 
-          <p className="mr-2 ml-10 w-32 text-gray-500 sm:ml-0 md:mb-0 dark:text-gray-400">
-            {dd !== "Invalid Date" ? dd : ""}
+          <p className="mr-2 ml-10 w-20 text-gray-500 dark:text-gray-400">
+            {shortenDate(date)}
           </p>
         </div>
       </div>
