@@ -21,14 +21,14 @@ function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body
-        className={cn("bg-gray-50 dark:bg-gray-900", interVariable.className)}
+        className={cn("bg-gray-50 dark:bg-gray-900", interVariable.className,)}
       >
         <ThemeProvider>
           <NavBar />
           <main className="flex flex-col justify-center px-8 bg-gray-50 dark:bg-gray-900">
             {children}
-            <Footer />
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
