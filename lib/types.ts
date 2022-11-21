@@ -10,6 +10,7 @@ export type TGreetings = {
 
 export type TFooter = {
   github: string;
+  email: string;
 };
 
 export type TProjectCard = {

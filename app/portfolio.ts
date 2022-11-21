@@ -11,7 +11,7 @@ export const greetings: TGreetings = {
   },
 };
 
-export const projects: TProjects = [
+export const featuredProjects: TProjects = [
   {
     title: "Name of Project",
     slug: "project-slug",
@@ -26,9 +26,10 @@ export const projects: TProjects = [
 
 export const footer: TFooter = {
   github: "https://github.com/justEstif",
+  email: "estifanosbeyene21@gmail.com"
 };
 
-export const blogs: TBlogCards = [
+export const featuredBlogs: TBlogCards = [
   {
     title: "Blog Title",
     slug: "blog-slug",
