@@ -7,7 +7,7 @@ import Image from "next/image";
 function ProjectCard({ slug, title, img, gradient }: TProjectCard) {
   return (
     <Link
-      href={`/projects/${slug}`}
+      href={`/project/${slug}`}
       className={cn(
         "flex flex-col gap-3 justify-center items-center p-4 rounded-xl border-4 border-transparent border-solid hover:scale-[1.01] transition-all transform",
         gradient
