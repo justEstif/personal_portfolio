@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { nanoid } from "nanoid";
-import { projects } from "../portfolio";
+import { featuredProjects } from "../portfolio";
 import ProjectCard from "./projectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +15,7 @@ function Projects({}: Props) {
         Featured Projects
       </h3>
       <div className="flex flex-wrap gap-6">
-        {projects.map((project) => (
+        {featuredProjects.map((project) => (
           <div key={nanoid()}>
             <ProjectCard {...project} />
           </div>

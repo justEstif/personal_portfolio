@@ -3,7 +3,7 @@ import Link from "next/link";
 import BlogCard from "./blogCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
-import { blogs } from "../portfolio";
+import { featuredBlogs } from "../portfolio";
 import { nanoid } from "nanoid";
 
 type Props = {};
@@ -12,11 +12,11 @@ function Blogs({}: Props) {
   return (
     <>
       <h3 className="mt-16 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
-        Featured Blog Posts
+        Featured Blogs
       </h3>
       <p className="mb-4 text-gray-600 dark:text-gray-400">Check out my blog</p>
       <div className="w-full">
-        {blogs.map((blog) => (
+        {featuredBlogs.map((blog) => (
           <div key={nanoid()}>
             <BlogCard slug={blog.slug} date={blog.date} title={blog.title} />
           </div>
