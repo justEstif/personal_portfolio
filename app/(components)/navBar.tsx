@@ -15,7 +15,6 @@ function NavBar({}: Props) {
             <NavItem href="/" text="Home" />
             <NavItem href="/projects" text="Projects" />
             <NavItem href="/blog" text="Blog" />
-            <NavItem href="/about" text="About" />
           </div>
         </div>
 
