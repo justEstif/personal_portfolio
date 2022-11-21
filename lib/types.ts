@@ -1,7 +1,7 @@
 export type TGreetings = {
   name: string;
+  email: string;
   title: string;
-  subtitle: string;
   img: {
     src: string;
     alt: string;
@@ -29,3 +29,5 @@ export type TBlogCard = {
   slug: string;
   date: Date;
 };
+
+export type TBlogCards = TBlogCard[];
