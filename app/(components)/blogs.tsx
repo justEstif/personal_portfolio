@@ -3,6 +3,8 @@ import Link from "next/link";
 import BlogCard from "./blogCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { blogs } from "../portfolio";
+import { nanoid } from "nanoid";
 
 type Props = {};
 
@@ -13,11 +15,14 @@ function Blogs({}: Props) {
         Featured Blog Posts
       </h3>
       <p className="mb-4 text-gray-600 dark:text-gray-400">Check out my blog</p>
-      <BlogCard
-        slug="blog-slug"
-        date={new Date("2022-11-19T15:09:59.443Z")}
-        title="Blog Title"
-      />
+      <div className="w-full">
+        {blogs.map((blog) => (
+          <div key={nanoid()}>
+            <BlogCard slug={blog.slug} date={blog.date} title={blog.title} />
+          </div>
+        ))}
+      </div>
+
       <Link
         target="_blank"
         rel="noopener noreferrer"
@@ -32,4 +37,4 @@ function Blogs({}: Props) {
   );
 }
 
-export default Blogs
+export default Blogs;
