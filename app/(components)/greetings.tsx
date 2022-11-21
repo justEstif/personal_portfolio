@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { greetings } from "../portfolio";
 
 function Greetings() {
@@ -10,17 +13,31 @@ function Greetings() {
         </h1>
         <h2 className="mb-4 text-gray-700 dark:text-gray-200">
           {greetings.title || "Title"}
+          <span>
+            <Link
+              href="/about"
+              className="italic text-blue-700 dark:text-blue-300"
+            >
+              {" "}
+              More about me
+            </Link>
+          </span>
         </h2>
-        <p className="mb-16 text-gray-600 dark:text-gray-400">
-          {greetings.subtitle || "Subtitle"}
-        </p>
+
+        <h2 className="mb-16 text-lg font-bold tracking-tight text-green-700 dark:text-green-300 hover:text-green-500 dark:hover:text-green-500">
+          <Link href={`mailto:${greetings.email}`}>
+            {"Let's get in touch "}
+            <FontAwesomeIcon icon={faEnvelope} />
+          </Link>
+        </h2>
       </div>
+
       <div className="relative mb-8">
         <Image
-          alt={greetings.img.alt || "Img alt"}
+          alt={greetings.img.alt}
           height={176}
           width={176}
-          src={greetings.img.src || "/avatar.jpg"}
+          src={greetings.img.src}
           sizes="30vw"
           priority
           className="rounded-full filter grayscale"
