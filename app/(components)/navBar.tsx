@@ -13,7 +13,7 @@ function NavBar({}: Props) {
           <MobileMenu />
           <div className="flex gap-3">
             <NavItem href="/" text="Home" />
-            <NavItem href="/projects" text="Projects" />
+            <NavItem href="/project" text="Projects" />
             <NavItem href="/blog" text="Blog" />
           </div>
         </div>

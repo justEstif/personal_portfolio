@@ -79,7 +79,7 @@ function MobileMenu({}: Props) {
             className="text-sm font-semibold text-gray-900 border-b border-gray-300 dark:text-gray-100 dark:border-gray-700"
             style={{ transitionDelay: "175ms" }}
           >
-            <Link href="/projects" className="flex pb-4 w-auto">
+            <Link href="/project" className="flex pb-4 w-auto">
               Projects
             </Link>
           </li>

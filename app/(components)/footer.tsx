@@ -3,7 +3,7 @@ import Link from "next/link";
 
 type Props = {};
 
-function Footer({ }: Props) {
+function Footer({}: Props) {
   return (
     <footer className="flex gap-8 justify-center items-start my-8 mx-auto w-full max-w-2xl">
       <Link href="/" className="text-gray-500 transition hover:text-gray-600">
@@ -11,7 +11,7 @@ function Footer({ }: Props) {
       </Link>
 
       <Link
-        href="/projects"
+        href="/project"
         className="text-gray-500 transition hover:text-gray-600"
       >
         Projects
@@ -22,8 +22,6 @@ function Footer({ }: Props) {
       >
         Blog
       </Link>
-
-
     </footer>
   );
 }
