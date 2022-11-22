@@ -16,9 +16,7 @@ function Projects({}: Props) {
       </h3>
       <div className="flex flex-wrap gap-6">
         {featuredProjects.map((project) => (
-          <div key={nanoid()}>
-            <ProjectCard {...project} />
-          </div>
+          <ProjectCard key={nanoid()} {...project} />
         ))}
       </div>
       <Link

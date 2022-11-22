@@ -16,10 +16,9 @@ function Greetings() {
           <span>
             <Link
               href="/about"
-              className="italic text-blue-700 dark:text-blue-300"
+              className="text-cyan-500 dark:text-cyan-300 hover:text-cyan-800 dark:hover:text-cyan-800"
             >
-              {" "}
-              More about me
+              {" More about me"}
             </Link>
           </span>
         </h2>
