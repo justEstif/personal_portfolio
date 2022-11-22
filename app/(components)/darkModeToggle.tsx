@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 type Props = {};
 
@@ -19,15 +18,9 @@ function DarkModeToggle({}: Props) {
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       {mounted && resolvedTheme === "dark" ? (
-        <FontAwesomeIcon
-          icon={faSun}
-          className="w-5 h-5 text-gray-800 dark:text-gray-200"
-        />
+        <FaSun className="w-5 h-5 text-gray-800 dark:text-gray-200" />
       ) : (
-        <FontAwesomeIcon
-          icon={faMoon}
-          className="w-5 h-5 text-gray-800 dark:text-gray-200"
-        />
+        <FaMoon className="w-5 h-5 text-gray-800 dark:text-gray-200" />
       )}
     </button>
   );

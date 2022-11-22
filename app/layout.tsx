@@ -1,9 +1,6 @@
 import React from "react";
 import cn from "classnames";
 
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-
 import "styles/globals.css"; // tailwind
 import Footer from "./(components)/footer";
 import NavBar from "./(components)/navBar";
@@ -15,7 +12,6 @@ type Props = {
 };
 
 const interVariable = Inter();
-config.autoAddCss = false;
 
 function RootLayout({ children }: Props) {
   return (

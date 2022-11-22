@@ -1,10 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import { nanoid } from "nanoid";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import { featuredProjects } from "../portfolio";
 import ProjectCard from "./projectCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {};
 
@@ -25,7 +24,7 @@ function Projects({}: Props) {
       >
         <>
           See all projects
-          <FontAwesomeIcon icon={faArrowRightLong} className="ml-1 w-6 h-6" />
+          <FaLongArrowAltRight className="ml-1 w-6 h-6" />
         </>
       </Link>
     </>

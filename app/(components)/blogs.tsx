@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import BlogCard from "./blogCard";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import { featuredBlogs } from "../portfolio";
 import { nanoid } from "nanoid";
 
@@ -33,7 +32,7 @@ function Blogs({}: Props) {
         className="flex items-center mt-8 h-6 leading-7 text-gray-600 rounded-lg transition-all dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
       >
         See all blog posts
-        <FontAwesomeIcon icon={faArrowRightLong} className="ml-1 w-6 h-6" />
+        <FaLongArrowAltRight className="ml-1 w-6 h-6" />
       </Link>
       <span className="h-16" />
     </>

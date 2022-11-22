@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FaEnvelope } from "react-icons/fa";
+
 import { greetings } from "../portfolio";
 
 function Greetings() {
@@ -16,7 +16,7 @@ function Greetings() {
           <span>
             <Link
               href="/about"
-              className="text-cyan-500 dark:text-cyan-300 hover:text-cyan-800 dark:hover:text-cyan-800"
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-700"
             >
               {" More about me"}
             </Link>
@@ -28,10 +28,7 @@ function Greetings() {
           href={`mailto:${greetings.email}`}
         >
           <p className="font-bold tracking-wide">{"Let's get in touch"}</p>
-          <FontAwesomeIcon
-            icon={faEnvelope}
-            className="animate-bounce group-hover:animate-pulse"
-          />
+          <FaEnvelope className="animate-bounce group-hover:animate-pulse" />
         </Link>
       </div>
 

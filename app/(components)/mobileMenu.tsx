@@ -2,8 +2,7 @@
 import { useState, useEffect } from "react";
 import cn from "classnames";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGripLines, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FaGripLines, FaTimes } from 'react-icons/fa'
 import useDelayedRender from "@/hooks/useDelayedRender";
 import styles from "styles/mobile-menu.module.css";
 
@@ -44,15 +43,13 @@ function MobileMenu({}: Props) {
         type="button"
         onClick={toggleMenu}
       >
-        <FontAwesomeIcon
-          icon={faGripLines}
+        <FaGripLines
           className={cn(
             !isMenuOpen ? "block" : "hidden",
             "absolute w-5 h-5 text-gray-900 dark:text-gray-100"
           )}
         />
-        <FontAwesomeIcon
-          icon={faTimes}
+        <FaTimes
           className={cn(
             isMenuOpen ? "block" : "hidden",
             "absolute w-5 h-5 text-gray-900 dark:text-gray-100"

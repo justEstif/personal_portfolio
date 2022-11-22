@@ -1,7 +1,7 @@
-import { about } from "../portfolio";
-import { nanoid } from "nanoid";
 import React from "react";
 import Link from "next/link";
+import { SiJavascript } from "react-icons/si";
+import { about } from "../portfolio";
 
 type Props = {};
 
@@ -16,36 +16,67 @@ function Page({}: Props) {
         <h3 className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white">
           Links
         </h3>
-        <p className="flex gap-4">
-          GitHub:
-          <Link href={`https://github.com/${about.github}/`}>
-            @{about.github}
-          </Link>
-        </p>
-        <p className="flex gap-4">
-          Discord:
-          <Link href={`https://discord.com/users/${about.discord}`}>
-            @{about.discord}
-          </Link>
-        </p>
+        <ul className="space-y-4 list-disc [&>*]:ml-12">
+          <li>
+            {"GitHub:  "}
+            <Link
+              href={`https://github.com/${about.github}/`}
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-700"
+            >
+              @{about.github}
+            </Link>
+          </li>
+          <li>
+            {"Email:  "}
+            <Link
+              href={`mailto:${about.email}`}
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-700"
+            >
+              @{about.email}
+            </Link>
+          </li>
+
+          <li>
+            {"Discord:  "}
+            <Link
+              href={`https://discord.com/users/${about.discord}`}
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-700"
+            >
+              @{about.discord}
+            </Link>
+          </li>
+          <li>TODO Telegram</li>
+        </ul>
       </section>
 
       <section className="mb-8">
         <h3 className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white">
           Bio
         </h3>
+
+        <ul className="space-y-4 list-disc [&>*]:ml-12">
+          <li>Did things 1</li>
+          <li>Did things 2</li>
+        </ul>
       </section>
 
       <section className="mb-8">
         <h3 className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white">
           Skills
         </h3>
+
+        <ul className="space-y-4 list-disc [&>*]:ml-12">
+          <li>
+            <SiJavascript />
+          </li>
+        </ul>
       </section>
 
       <section className="mb-8">
         <h3 className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white">
           Status
         </h3>
+        <p>{about.status}</p>
       </section>
     </div>
   );
