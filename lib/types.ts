@@ -1,3 +1,8 @@
+export type THead = {
+  title: string
+  description: string
+  type: string
+}
 export type TGreetings = {
   name: string;
   email: string;

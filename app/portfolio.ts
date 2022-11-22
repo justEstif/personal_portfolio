@@ -1,4 +1,10 @@
-import { TBlogCards, TFooter, TGreetings, TProjects } from "lib/types";
+import { TBlogCards, TFooter, TGreetings, THead, TProjects } from "lib/types";
+
+export const head: THead = {
+  title: "Estifanos Beyene – Developer, Engineer.",
+  description: `Full-stack Developer, Mountain Bike Enthusiast`,
+  type: "website",
+};
 
 export const greetings: TGreetings = {
   name: "Estifanos Beyene",
@@ -11,10 +17,16 @@ export const greetings: TGreetings = {
   },
 };
 
+export const footer: TFooter = {
+  github: "https://github.com/justEstif",
+  email: "estifanosbeyene21@gmail.com",
+};
+
+// TODO move to backend
 export const featuredProjects: TProjects = [
   {
     title: "Name of Project",
-    slug: "project-slug",
+    slug: "project-id",
     img: {
       src: "/projects/project.jpg", // in public/projects
       alt: "Screenshot of project",
@@ -24,11 +36,7 @@ export const featuredProjects: TProjects = [
   },
 ];
 
-export const footer: TFooter = {
-  github: "https://github.com/justEstif",
-  email: "estifanosbeyene21@gmail.com",
-};
-
+// TODO move to backend
 export const featuredBlogs: TBlogCards = [
   {
     title: "Blog Title",
@@ -37,6 +45,7 @@ export const featuredBlogs: TBlogCards = [
   },
 ];
 
+// TODO move to backend
 export const allProjects: TProjects = [
   {
     title: "Name of Project",
@@ -48,64 +57,27 @@ export const allProjects: TProjects = [
     gradient:
       "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
   },
-  {
-    title: "Name of Project",
-    slug: "project-slug",
-    img: {
-      src: "/projects/project.jpg", // in public/projects
-      alt: "Screenshot of project",
-    },
-    gradient:
-      "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
-  },
-  {
-    title: "Name of Project",
-    slug: "project-slug",
-    img: {
-      src: "/projects/project.jpg", // in public/projects
-      alt: "Screenshot of project",
-    },
-    gradient:
-      "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
-  },
-  {
-    title: "Name of Project",
-    slug: "project-slug",
-    img: {
-      src: "/projects/project.jpg", // in public/projects
-      alt: "Screenshot of project",
-    },
-    gradient:
-      "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
-  },
-  {
-    title: "Name of Project",
-    slug: "project-slug",
-    img: {
-      src: "/projects/project.jpg", // in public/projects
-      alt: "Screenshot of project",
-    },
-    gradient:
-      "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
-  },
-  {
-    title: "Name of Project",
-    slug: "project-slug",
-    img: {
-      src: "/projects/project.jpg", // in public/projects
-      alt: "Screenshot of project",
-    },
-    gradient:
-      "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
-  },
-  {
-    title: "Name of Project",
-    slug: "project-slug",
-    img: {
-      src: "/projects/project.jpg", // in public/projects
-      alt: "Screenshot of project",
-    },
-    gradient:
-      "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
-  },
 ];
+
+export const about = {
+  // github: {
+  //   username: "justEstif",
+  //   link: "https://github.com/justEstif/",
+  // },
+  // discord: {
+  //   username: "justCozz#4245",
+  //   link: "https://discord.com/users/justCozz#4245",
+  // },
+  github: "justEstif",
+  discord: "justCozz#4245",
+  email: "estifanosbeyene21@gmail.com",
+  status: "Available for hire",
+  hobbies: ["biking"],
+  bio: "I'm a web developer. I build user-friendly and responsive websites to help people and businesses meet their needs.",
+  skills: [
+    {
+      name: "HTML",
+      img: "/",
+    },
+  ],
+};

@@ -1,9 +1,10 @@
+import { head as oldHead } from "app/portfolio";
 import React from "react";
-import { head } from "./portfolio";
 
 type Props = {};
 
 function Head({}: Props) {
+  const head = { ...oldHead, title: "About - Estifanos Beyene" };
   return (
     <>
       <title>{head.title}</title>
