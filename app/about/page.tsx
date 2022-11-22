@@ -27,7 +27,7 @@ function Page({}: Props) {
             </Link>
           </li>
           <li>
-            {"Email:  "}
+            {"Gmail:  "}
             <Link
               href={`mailto:${about.email}`}
               className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-700"
@@ -46,6 +46,7 @@ function Page({}: Props) {
             </Link>
           </li>
           <li>TODO Telegram</li>
+          <li>TODO LinkedIn</li>
         </ul>
       </section>
 
@@ -65,11 +66,12 @@ function Page({}: Props) {
           Skills
         </h3>
 
-        <ul className="space-y-4 list-disc [&>*]:ml-12">
-          <li>
-            <SiJavascript />
-          </li>
-        </ul>
+        <div className="relative group">
+          <SiJavascript className="block text-8xl" />
+          <p className="flex absolute right-0 bottom-0 left-0 z-10 justify-center items-end text-lg font-semibold text-black bg-gray-200 opacity-0 duration-300 dark:text-white dark:bg-gray-900 group-hover:opacity-100">
+            {SiJavascript.name.slice(2)}
+          </p>
+        </div>
       </section>
 
       <section className="mb-8">
