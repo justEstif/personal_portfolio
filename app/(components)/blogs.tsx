@@ -17,9 +17,12 @@ function Blogs({}: Props) {
       <p className="mb-4 text-gray-600 dark:text-gray-400">Check out my blog</p>
       <div className="w-full">
         {featuredBlogs.map((blog) => (
-          <div key={nanoid()}>
-            <BlogCard slug={blog.slug} date={blog.date} title={blog.title} />
-          </div>
+          <BlogCard
+            key={nanoid()}
+            slug={blog.slug}
+            date={blog.date}
+            title={blog.title}
+          />
         ))}
       </div>
 

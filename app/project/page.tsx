@@ -14,9 +14,7 @@ function Page({}: Props) {
 
       <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
         {allProjects.map((project) => (
-          <div key={nanoid()}>
-            <ProjectCard {...project} />
-          </div>
+          <ProjectCard key={nanoid()} {...project} />
         ))}
       </div>
     </div>
