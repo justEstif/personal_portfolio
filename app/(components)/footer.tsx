@@ -6,9 +6,9 @@ import { footer } from "../portfolio";
 
 type Props = {};
 
-function Footer({}: Props) {
+function Footer({ }: Props) {
   return (
-    <footer className="flex sticky gap-8 justify-center items-start my-8 mx-auto w-full max-w-2xl top-[100vh]">
+    <footer className="flex text-2xl sticky gap-8 justify-center items-start my-8 mx-auto w-full max-w-2xl top-[100vh]">
       <Link href="/">
         <FaHome className="hover:animate-pulse" />
       </Link>

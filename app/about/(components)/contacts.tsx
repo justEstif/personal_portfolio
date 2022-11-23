@@ -30,9 +30,9 @@ const Contact = ({}: Props) => {
       <h3 className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white">
         Contacts
       </h3>
-      <ul className="list-disc">
+      <ul>
         {contacts.map((contact) => (
-          <li className="ml-12" key={nanoid()}>
+          <li key={nanoid()}>
             {contact.name}
             <Link
               href={contact.link}

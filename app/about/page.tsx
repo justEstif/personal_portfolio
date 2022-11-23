@@ -2,6 +2,7 @@ import React from "react";
 import Skills from "./(components)/skills";
 import Contact from "./(components)/contacts";
 import Bio from "./(components)/bio";
+import Status from "./(components)/status";
 
 type Props = {};
 
@@ -12,8 +13,8 @@ function Page({}: Props) {
         About Me
       </h1>
       <Contact />
-
       <Bio />
+      <Status />
       <Skills />
     </div>
   );

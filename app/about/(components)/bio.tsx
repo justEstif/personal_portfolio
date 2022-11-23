@@ -2,9 +2,6 @@ import { nanoid } from "nanoid";
 
 type Props = {};
 
-const status = "Available for hire";
-// const me =
-//   "I'm a web developer. I build user-friendly and responsive websites to help people and businesses meet their needs.";
 const bio = [
   {
     year: "2021 - Present",
@@ -17,6 +14,7 @@ const bio = [
     description: "",
   },
 ];
+
 const Bio = ({}: Props) => {
   return (
     <section className="mb-8">
@@ -28,8 +26,6 @@ const Bio = ({}: Props) => {
           <li key={nanoid()}>{event.year}</li>
         ))}
       </ul>
-
-      <p>Status: {status}</p>
     </section>
   );
 };
