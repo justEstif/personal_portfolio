@@ -58,26 +58,3 @@ export const allProjects: TProjects = [
       "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
   },
 ];
-
-export const about = {
-  // github: {
-  //   username: "justEstif",
-  //   link: "https://github.com/justEstif/",
-  // },
-  // discord: {
-  //   username: "justCozz#4245",
-  //   link: "https://discord.com/users/justCozz#4245",
-  // },
-  github: "justEstif",
-  discord: "justCozz#4245",
-  email: "estifanosbeyene21@gmail.com",
-  status: "Available for hire",
-  hobbies: ["biking"],
-  bio: "I'm a web developer. I build user-friendly and responsive websites to help people and businesses meet their needs.",
-  skills: [
-    {
-      name: "HTML",
-      img: "/",
-    },
-  ],
-};
