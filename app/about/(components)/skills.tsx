@@ -1,4 +1,8 @@
+"use client";
+import { useState } from "react";
 import { nanoid } from "nanoid";
+import cn from "classnames";
+import { AiOutlinePlusSquare, AiOutlineMinusSquare } from "react-icons/ai";
 import {
   SiCss3,
   SiExpress,
@@ -27,14 +31,21 @@ const skills = [
 ];
 
 const Skills = ({}: Props) => {
+  const [hide, setHide] = useState(true);
   return (
     <section className="mb-8">
-      <h3 className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white">
+      <h3 className="flex gap-4 items-center mb-6 text-2xl font-bold tracking-tight text-black dark:text-white">
         Skills
+        <button onClick={() => setHide(!hide)}>
+          {hide ? <AiOutlinePlusSquare /> : <AiOutlineMinusSquare />}
+        </button>
       </h3>
       <ul className="grid grid-cols-3 gap-6 md:grid-cols-5">
-        {skills.map((skill) => (
-          <li key={nanoid()} className="relative group">
+        {skills.map((skill, i) => (
+          <li
+            key={nanoid()}
+            className={cn("relative group", i > 3 && hide && "hidden")}
+          >
             {skill.icon}
             <p className="flex absolute right-0 bottom-0 left-0 z-10 justify-center items-end text-lg font-semibold text-black bg-gray-200 opacity-0 duration-300 dark:text-white dark:bg-gray-900 group-hover:opacity-100">
               {skill.name}
@@ -42,10 +53,6 @@ const Skills = ({}: Props) => {
           </li>
         ))}
       </ul>
-      {/**
-       * TODO Add a button for show more to limit how many skills are shown at once
-       * limit it to 5 and then have a show less button
-       */}
     </section>
   );
 };
