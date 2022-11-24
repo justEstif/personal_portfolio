@@ -5,6 +5,12 @@ type Props = {};
 
 const contacts = [
   {
+    name: "Email",
+    username: "estifanosbeyene21@gmail.com",
+    link: "mailto:estifanosbeyene21@gmail.com",
+    icon: <SiGmail />,
+  },
+  {
     name: "GitHub",
     username: "justEstif",
     link: "https://github.com/justEstif",
@@ -16,15 +22,9 @@ const contacts = [
     link: "https://discord.com/users/justCozz#4245",
     icon: <SiDiscord />,
   },
-  {
-    name: "Email",
-    username: "estifanosbeyene21@gmail.com",
-    link: "mailto:estifanosbeyene21@gmail.com",
-    icon: <SiGmail />,
-  },
 ];
 
-const Contact = ({ }: Props) => {
+const Contact = ({}: Props) => {
   return (
     <section className="mb-8">
       <h3 className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white">
@@ -32,11 +32,11 @@ const Contact = ({ }: Props) => {
       </h3>
       <ul className="space-y-2">
         {contacts.map((contact) => (
-          <li key={nanoid()}>
-            {contact.name}
+          <li key={nanoid()} className="flex gap-4">
+            <p className="font-semibold">{contact.name}</p>
             <Link
               href={contact.link}
-              className="ml-4 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-700"
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-700"
             >
               {contact.username}
             </Link>
