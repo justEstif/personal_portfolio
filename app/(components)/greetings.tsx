@@ -25,7 +25,7 @@ function Greetings() {
 
         <Link
           className="flex gap-4 items-center mb-16 text-lg text-green-700 dark:text-green-300 hover:text-green-500 group dark:hover:text-green-500"
-          href={`mailto:${greetings.email}`}
+          href="/contact"
         >
           <p className="font-bold tracking-wide">{"Let's get in touch"}</p>
           <FaEnvelope className="animate-bounce group-hover:animate-pulse" />
