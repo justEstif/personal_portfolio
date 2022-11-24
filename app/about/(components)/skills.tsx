@@ -30,14 +30,18 @@ const skills = [
   { name: "TailwindCSS", icon: <SiTailwindcss className="block text-8xl" /> },
 ];
 
-const Skills = ({}: Props) => {
+const Skills = ({ }: Props) => {
   const [hide, setHide] = useState(true);
   return (
     <section className="mb-8">
       <h3 className="flex gap-4 items-center mb-6 text-2xl font-bold tracking-tight text-black dark:text-white">
         Skills
         <button onClick={() => setHide(!hide)}>
-          {hide ? <AiOutlinePlusSquare /> : <AiOutlineMinusSquare />}
+          {hide ? (
+            <AiOutlinePlusSquare className="animate-bounce hover:animate-none" />
+          ) : (
+            <AiOutlineMinusSquare className="animate-bounce hover:animate-none" />
+          )}
         </button>
       </h3>
       <ul className="grid grid-cols-3 gap-6 md:grid-cols-5">
