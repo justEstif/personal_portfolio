@@ -4,16 +4,22 @@ import { nanoid } from "nanoid";
 import cn from "classnames";
 import { AiOutlinePlusSquare, AiOutlineMinusSquare } from "react-icons/ai";
 import {
+  SiArchlinux,
   SiCss3,
   SiExpress,
   SiHtml5,
   SiJavascript,
+  SiJest,
   SiMongodb,
+  SiNeovim,
   SiNextdotjs,
+  SiNpm,
   SiPostgresql,
   SiReact,
+  SiSqlite,
   SiTailwindcss,
   SiTypescript,
+  SiYarn,
 } from "react-icons/si";
 type Props = {};
 
@@ -27,23 +33,29 @@ const skills = [
   { name: "TypeScript", icon: <SiTypescript className="block text-8xl" /> },
   { name: "Next.JS", icon: <SiNextdotjs className="block text-8xl" /> },
   { name: "PostgreSQL", icon: <SiPostgresql className="block text-8xl" /> },
+  { name: "SQLite", icon: <SiSqlite className="block text-8xl" /> },
   { name: "TailwindCSS", icon: <SiTailwindcss className="block text-8xl" /> },
+  { name: "Neovim", icon: <SiNeovim className="block text-8xl" /> },
+  { name: "Jest", icon: <SiJest className="block text-8xl" /> },
+  { name: "Arch", icon: <SiArchlinux className="block text-8xl" /> },
+  { name: "NPM", icon: <SiNpm className="block text-8xl" /> },
+  { name: "Yarn", icon: <SiYarn className="block text-8xl" /> },
 ];
 
-const Skills = ({ }: Props) => {
+const Skills = ({}: Props) => {
   const [hide, setHide] = useState(true);
   return (
     <section className="mb-8">
-      <h3 className="flex gap-4 items-center mb-6 text-2xl font-bold tracking-tight text-black dark:text-white">
+      <h2 className="flex gap-4 items-center mb-6 text-4xl font-bold tracking-tight text-black dark:text-white">
         Skills
-        <button onClick={() => setHide(!hide)}>
+        <button onClick={() => setHide(!hide)} className="text-2xl">
           {hide ? (
             <AiOutlinePlusSquare className="animate-bounce hover:animate-none" />
           ) : (
             <AiOutlineMinusSquare className="animate-bounce hover:animate-none" />
           )}
         </button>
-      </h3>
+      </h2>
       <ul className="grid grid-cols-3 gap-6 md:grid-cols-5">
         {skills.map((skill, i) => (
           <li

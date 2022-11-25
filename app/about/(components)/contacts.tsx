@@ -27,9 +27,9 @@ const contacts = [
 const Contact = ({}: Props) => {
   return (
     <section className="mb-8">
-      <h3 className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white">
+      <h2 className="mb-6 text-4xl font-bold tracking-tight text-black dark:text-white">
         Contacts
-      </h3>
+      </h2>
       <ul className="space-y-2">
         {contacts.map((contact) => (
           <li key={nanoid()} className="flex gap-4">
