@@ -3,53 +3,66 @@ import { useState } from "react";
 import cn from "classnames";
 type Props = {};
 
-const Page = ({}: Props) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<
-    "idle" | "success" | "error" | "pending"
-  >("idle");
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("sending");
-    setStatus("pending");
-    let data = {
-      name,
-      email,
-      message,
-    };
+type TFormState = {
+  name: string;
+  email: string;
+  message: string;
+};
 
-    fetch("/api/contact", {
+type TFormStatus = "idle" | "success" | "error" | "pending";
+
+const initialFormState: TFormState = {
+  name: "",
+  email: "",
+  message: "",
+};
+
+const Page = ({}: Props) => {
+  const [status, setStatus] = useState<TFormStatus>("idle");
+  const [form, setForm] = useState<TFormState>(initialFormState);
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(form);
+
+    setStatus("pending");
+    let response = await fetch("/api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.status === 200) {
-        console.log("Response succeeded!");
-        setStatus("success");
-        setName("");
-        setEmail("");
-        setMessage("");
-      } else {
-        setStatus("error");
-      }
+      body: JSON.stringify(form),
+    }).catch((err) => {
+      setStatus("error");
+      console.warn(err);
+      return new Response(
+        JSON.stringify({
+          code: 400,
+          message: "Error", // TODO handle error
+        })
+      );
     });
+    if (response.ok) {
+      setStatus("success");
+      setForm(initialFormState);
+    } else {
+      setStatus("error");
+      return Promise.reject(response);
+    }
   };
+
   return (
     <div className="flex flex-col justify-center items-start mx-auto max-w-2xl border-gray-200 dark:border-gray-700">
       <h1 className="mb-8 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
         Contact
       </h1>
-      <form
-        className="w-full"
-        onSubmit={(e) => {
-          handleSubmit(e);
-        }}
-      >
+      <form className="w-full" onSubmit={handleSubmit}>
         <div className="flex flex-col mb-4">
           <label
             htmlFor="name"
@@ -62,9 +75,7 @@ const Page = ({}: Props) => {
             name="name"
             required={true}
             className="py-1 px-2 w-full max-w-sm border-2 border-black dark:border-white"
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
+            onChange={handleChange}
           />
         </div>
 
@@ -80,9 +91,7 @@ const Page = ({}: Props) => {
             name="email"
             required={true}
             className="py-1 px-2 w-full max-w-sm border-2 border-black dark:border-white"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
+            onChange={handleChange}
           />
         </div>
 
@@ -99,9 +108,7 @@ const Page = ({}: Props) => {
             rows={5}
             cols={9}
             className="py-1 px-2 border-2 border-black dark:border-white"
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
+            onChange={handleChange}
           />
         </div>
         <div className="flex justify-center items-center mt-8">
