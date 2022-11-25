@@ -1,20 +1,9 @@
-import { TBlogCards, TFooter, TGreetings, THead, TProjects } from "lib/types";
+import { TBlogCards, TFooter, THead, TProjects } from "lib/types";
 
 export const head: THead = {
   title: "Estifanos Beyene – Developer, Engineer.",
   description: `Full-stack Developer, Mountain Bike Enthusiast`,
   type: "website",
-};
-
-export const greetings: TGreetings = {
-  name: "Estifanos Beyene",
-  email: "estifanosbeyene21@gmail.com",
-  title:
-    "A passionate Full Stack Software Developer building Web applications with JavaScript / Reactjs / Nodejs and some other cool libraries and frameworks.",
-  img: {
-    src: "/avatar.jpg",
-    alt: "Estifanos Beyene Image",
-  },
 };
 
 export const footer: TFooter = {

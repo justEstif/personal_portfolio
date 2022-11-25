@@ -10,16 +10,6 @@ export type THead = {
   type: string;
 };
 
-export type TGreetings = {
-  name: string;
-  email: string;
-  title: string;
-  img: {
-    src: string;
-    alt: string;
-  };
-};
-
 export type TFooter = {
   github: string;
   email: string;
