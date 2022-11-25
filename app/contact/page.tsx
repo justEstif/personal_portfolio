@@ -1,23 +1,17 @@
 "use client";
 import { useState } from "react";
 import cn from "classnames";
-type Props = {};
-
-type TFormState = {
-  name: string;
-  email: string;
-  message: string;
-};
+import { TFormState } from "lib/types";
 
 type TFormStatus = "idle" | "success" | "error" | "pending";
 
 const initialFormState: TFormState = {
-  name: "",
+  subject: "",
   email: "",
   message: "",
 };
 
-const Page = ({}: Props) => {
+const Page = () => {
   const [status, setStatus] = useState<TFormStatus>("idle");
   const [form, setForm] = useState<TFormState>(initialFormState);
   const handleChange = (
@@ -26,35 +20,32 @@ const Page = ({}: Props) => {
     setForm({ ...form, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(form);
 
     setStatus("pending");
-    let response = await fetch("/api/contact", {
+
+    fetch("/api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
       },
       body: JSON.stringify(form),
-    }).catch((err) => {
-      setStatus("error");
-      console.warn(err);
-      return new Response(
-        JSON.stringify({
-          code: 400,
-          message: "Error", // TODO handle error
-        })
-      );
+    }).then((res) => {
+      if (res.status === 200) {
+        setStatus("success");
+        setForm(initialFormState);
+      } else {
+        setStatus("error");
+        return new Response(
+          JSON.stringify({
+            code: 400,
+            message: "Error", // TODO handle error
+          })
+        );
+      }
     });
-    if (response.ok) {
-      setStatus("success");
-      setForm(initialFormState);
-    } else {
-      setStatus("error");
-      return Promise.reject(response);
-    }
   };
 
   return (
@@ -65,22 +56,6 @@ const Page = ({}: Props) => {
       <form className="w-full" onSubmit={handleSubmit}>
         <div className="flex flex-col mb-4">
           <label
-            htmlFor="name"
-            className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white"
-          >
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            required={true}
-            className="py-1 px-2 w-full max-w-sm border-2 border-black dark:border-white"
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="flex flex-col mb-4">
-          <label
             htmlFor="email"
             className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white"
           >
@@ -89,6 +64,22 @@ const Page = ({}: Props) => {
           <input
             type="email"
             name="email"
+            required={true}
+            className="py-1 px-2 w-full max-w-sm border-2 border-black dark:border-white"
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="flex flex-col mb-4">
+          <label
+            htmlFor="subject"
+            className="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white"
+          >
+            Subject
+          </label>
+          <input
+            type="text"
+            name="subject"
             required={true}
             className="py-1 px-2 w-full max-w-sm border-2 border-black dark:border-white"
             onChange={handleChange}

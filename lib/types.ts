@@ -1,8 +1,15 @@
+export type TFormState = {
+  subject: string;
+  email: string;
+  message: string;
+};
+
 export type THead = {
-  title: string
-  description: string
-  type: string
-}
+  title: string;
+  description: string;
+  type: string;
+};
+
 export type TGreetings = {
   name: string;
   email: string;
