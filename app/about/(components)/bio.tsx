@@ -1,37 +1,19 @@
 import { nanoid } from "nanoid";
+import { bios } from "app/data";
 
 type Props = {};
 
-const bio = [
-  {
-    year: "2000",
-    description: "Born in Addis Ababa, Ethiopia",
-  },
-  {
-    year: "2021",
-    description: "Learning full stack development from The Odin Project",
-  },
-  {
-    year: "2021",
-    description: "Graduated with degree in Engineering and Math",
-  },
-  {
-    year: "2022",
-    description: "Working as a freelance web developer",
-  },
-];
-
-const Bio = ({ }: Props) => {
+const Bio = ({}: Props) => {
   return (
     <section className="mb-8">
       <h2 className="mb-6 text-4xl font-bold tracking-tight text-black dark:text-white">
         Bio
       </h2>
       <ul className="space-y-2">
-        {bio.map((act) => (
+        {bios.map((bio) => (
           <li key={nanoid()} className="flex gap-4">
-            <p className="font-semibold">{act.year}</p>
-            <p>{act.description}</p>
+            <p className="font-semibold">{bio.year}</p>
+            <p>{bio.description}</p>
           </li>
         ))}
       </ul>

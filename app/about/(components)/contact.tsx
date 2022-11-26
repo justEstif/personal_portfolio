@@ -1,28 +1,7 @@
 import { nanoid } from "nanoid";
 import Link from "next/link";
-import { SiGithub, SiDiscord, SiGmail } from "react-icons/si";
+import { contacts } from "app/data";
 type Props = {};
-
-const contacts = [
-  {
-    name: "Email",
-    username: "estifanosbeyene21@gmail.com",
-    link: "mailto:estifanosbeyene21@gmail.com",
-    icon: <SiGmail />,
-  },
-  {
-    name: "GitHub",
-    username: "justEstif",
-    link: "https://github.com/justEstif",
-    icon: <SiGithub />,
-  },
-  {
-    name: "Discord",
-    username: "justCozz#4245",
-    link: "https://discord.com/users/justCozz#4245",
-    icon: <SiDiscord />,
-  },
-];
 
 const Contact = ({}: Props) => {
   return (

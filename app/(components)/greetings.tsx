@@ -1,17 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaEnvelope } from "react-icons/fa";
-
-const greetings = {
-  name: "Estifanos Beyene",
-  email: "estifanosbeyene21@gmail.com",
-  title:
-    "A passionate full stack developer building web applications with typescript, reactjs, express, nextjs and some other cool libraries and frameworks.",
-  img: {
-    src: "/avatar.jpg",
-    alt: "Estifanos Beyene Image",
-  },
-};
+import { greetings } from "../data";
 
 function Greetings() {
   return (

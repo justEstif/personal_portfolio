@@ -1,3 +1,30 @@
+export type TGreetings = {
+  name: string;
+  email: string;
+  title: string;
+  img: {
+    src: string;
+    alt: string;
+  };
+};
+
+export type TBio = {
+  year: string;
+  description: string;
+};
+
+export type TContact = {
+  name: string;
+  username: string;
+  link: string;
+  icon: JSX.Element;
+};
+
+export type TSkill = {
+  name: string;
+  icon: JSX.Element;
+};
+
 export type TFormState = {
   subject: string;
   email: string;
@@ -12,10 +39,9 @@ export type THead = {
 
 export type TFooter = {
   github: string;
-  email: string;
 };
 
-export type TProjectCard = {
+export type TProject = {
   title: string;
   slug: string;
   gradient: string;
@@ -24,8 +50,6 @@ export type TProjectCard = {
     alt: string;
   };
 };
-
-export type TProjects = TProjectCard[];
 
 export type TBlogCard = {
   title: string;

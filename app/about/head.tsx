@@ -1,9 +1,9 @@
-import { head } from "app/portfolio";
+import { head } from "app/data";
 import React from "react";
 
 type Props = {};
 
-const Head = ({ }: Props) => {
+const Head = ({}: Props) => {
   const title = "About - Estifanos Beyene";
   return (
     <>

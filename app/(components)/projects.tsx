@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { nanoid } from "nanoid";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { featuredProjects } from "../portfolio";
+import { featuredProjects } from "../data";
 import ProjectCard from "./projectCard";
 
 type Props = {};

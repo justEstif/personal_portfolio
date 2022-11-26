@@ -1,6 +1,6 @@
 import React from "react";
 import Skills from "./(components)/skills";
-import Contact from "./(components)/contacts";
+import Contact from "./(components)/contact";
 import Bio from "./(components)/bio";
 import Status from "./(components)/status";
 

@@ -1,10 +1,10 @@
 import React from "react";
 import cn from "classnames";
+import { Inter } from "@next/font/google";
 
 import "styles/globals.css"; // tailwind
 import Footer from "./(components)/footer";
 import NavBar from "./(components)/navBar";
-import { Inter } from "@next/font/google";
 import ThemeProvider from "./(components)/themeProvider";
 
 type Props = {

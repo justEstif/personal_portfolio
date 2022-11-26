@@ -1,6 +1,5 @@
+import { status } from "app/data";
 type Props = {};
-
-const status = "Available for hire";
 
 const Status = ({}: Props) => {
   return (

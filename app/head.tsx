@@ -1,5 +1,5 @@
 import React from "react";
-import { head } from "./portfolio";
+import { head } from "./data";
 
 type Props = {};
 

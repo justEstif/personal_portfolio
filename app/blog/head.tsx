@@ -1,4 +1,4 @@
-import { head } from "app/portfolio";
+import { head } from "app/data";
 type Props = {};
 
 const Head = ({ }: Props) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { nanoid } from "nanoid";
-import { allProjects } from "../portfolio";
 import ProjectCard from "../(components)/projectCard";
+import { projects } from "app/data";
 
 type Props = {};
 
@@ -13,7 +13,7 @@ function Page({}: Props) {
       </h1>
 
       <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
-        {allProjects.map((project) => (
+        {projects.map((project) => (
           <ProjectCard key={nanoid()} {...project} />
         ))}
       </div>
