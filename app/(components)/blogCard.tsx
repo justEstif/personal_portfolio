@@ -6,7 +6,12 @@ import { shortenDate } from "lib/utils";
 function BlogCard({ slug, title, date }: TBlogCard) {
   return (
     <Link
-      href={`/blog/${slug}`}
+      href={{
+        pathname: `/blog/${slug}`,
+        query: {
+          id: 0,
+        },
+      }}
       className="w-full"
       aria-label={title}
       target="_blank"

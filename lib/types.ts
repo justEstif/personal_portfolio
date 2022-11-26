@@ -55,6 +55,5 @@ export type TBlogCard = {
   title: string;
   slug: string;
   date: Date;
+  id: number;
 };
-
-export type TBlogCards = TBlogCard[];

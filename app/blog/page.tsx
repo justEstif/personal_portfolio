@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import BlogCard from "app/(components)/blogCard";
-import { blogs } from "app/data";
+import { allBlogCards } from "app/data";
 
 type Props = {};
 
@@ -12,7 +12,7 @@ function Page({}: Props) {
       </h1>
 
       <div className="w-full">
-        {blogs.map((blog) => (
+        {allBlogCards.map((blog) => (
           <BlogCard key={nanoid()} {...blog} />
         ))}
       </div>

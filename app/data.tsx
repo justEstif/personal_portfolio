@@ -26,9 +26,10 @@ import {
   TFooter,
   TGreetings,
   THead,
-  TProject,
+  TProject as TProjectCard,
   TSkill,
 } from "lib/types";
+import { getReadingTime } from "lib/utils";
 
 /**
  * @description data for header
@@ -67,7 +68,7 @@ export const greetings: TGreetings = {
  * @description data for projects
  * @file app/(components)/projects.tsx
  */
-export const featuredProjects: TProject[] = [
+export const featuredProjectCards: TProjectCard[] = [
   {
     title: "Name of Project",
     slug: "project-id",
@@ -84,10 +85,11 @@ export const featuredProjects: TProject[] = [
  * @description data for projects
  * @file app/(components)/blogs.tsx
  */
-export const featuredBlogs: TBlogCard[] = [
+export const featuredBlogCards: TBlogCard[] = [
   {
     title: "Blog Title",
-    slug: "blog-slug",
+    slug: "blog-title",
+    id: 0,
     date: new Date("2022-11-19T15:09:59.443Z"),
   },
 ];
@@ -173,7 +175,7 @@ export const status: string = "Available for hire";
  * @description data for contacts
  * @file app/project/(components)/status.tsx
  */
-export const projects: TProject[] = [
+export const allProjectCards: TProjectCard[] = [
   {
     title: "Name of Project",
     slug: "project-slug",
@@ -190,10 +192,26 @@ export const projects: TProject[] = [
  * @description data for contacts
  * @file app/project/(components)/status.tsx
  */
-export const blogs: TBlogCard[] = [
+export const allBlogCards: TBlogCard[] = [
   {
     title: "Blog Title",
-    slug: "blog-slug",
+    slug: "blog-title",
+    id: 0,
     date: new Date("2022-11-19T15:09:59.443Z"),
+  },
+];
+
+/**
+ * @description data of blogs
+ * @file app/blog/[slug]/page.tsx
+ */
+export const blogs = [
+  {
+    title: "Blog Title",
+    text: "This is the text of the blog",
+    date: new Date("2022-11-19T15:09:59.443Z"),
+    get readingTime() {
+      return `${getReadingTime(this.text)} min`;
+    },
   },
 ];

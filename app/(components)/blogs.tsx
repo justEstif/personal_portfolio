@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import BlogCard from "./blogCard";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { featuredBlogs } from "../data";
+import { featuredBlogCards } from "../data";
 import { nanoid } from "nanoid";
 
 type Props = {};
@@ -15,7 +15,7 @@ function Blogs({}: Props) {
       </h3>
       <p className="mb-4 text-gray-600 dark:text-gray-400">Check out my blog</p>
       <div className="w-full">
-        {featuredBlogs.map((blog) => (
+        {featuredBlogCards.map((blog) => (
           <BlogCard
             key={nanoid()}
             slug={blog.slug}
