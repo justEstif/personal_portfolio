@@ -19,7 +19,7 @@ function Projects({}: Props) {
         ))}
       </div>
       <Link
-        href="/project"
+        href="/projects"
         className="flex items-center mt-8 h-6 leading-7 text-gray-600 rounded-lg transition-all dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
       >
         <>

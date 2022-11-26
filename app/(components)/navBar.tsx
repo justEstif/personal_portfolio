@@ -11,7 +11,7 @@ function NavBar({}: Props) {
         <div className="ml-[-0.60rem]">
           <div className="flex gap-3">
             <NavItem href="/" text="Home" />
-            <NavItem href="/project" text="Project" />
+            <NavItem href="/projects" text="Projects" />
             <NavItem href="/blog" text="Blog" />
           </div>
         </div>
