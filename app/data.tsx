@@ -31,6 +31,24 @@ import {
 } from "lib/types";
 
 /**
+ * @description data for header
+ * @file app/(components)/header.tsx
+ */
+export const head: THead = {
+  title: "Estifanos Beyene – Developer, Engineer.",
+  description: `Full-stack Developer, Mountain Bike Enthusiast`,
+  type: "website",
+};
+
+/**
+ * @description data for projects
+ * @file app/(components)/footer.tsx
+ */
+export const footer: TFooter = {
+  github: "https://github.com/justEstif",
+};
+
+/**
  * @description data for greetings
  * @file app/(components)/greetings.tsx
  */
@@ -73,24 +91,6 @@ export const featuredBlogs: TBlogCard[] = [
     date: new Date("2022-11-19T15:09:59.443Z"),
   },
 ];
-
-/**
- * @description data for projects
- * @file app/(components)/footer.tsx
- */
-export const footer: TFooter = {
-  github: "https://github.com/justEstif",
-};
-
-/**
- * @description data for header
- * @file app/(components)/header.tsx
- */
-export const head: THead = {
-  title: "Estifanos Beyene – Developer, Engineer.",
-  description: `Full-stack Developer, Mountain Bike Enthusiast`,
-  type: "website",
-};
 
 /**
  * @description data for bio
@@ -183,5 +183,17 @@ export const projects: TProject[] = [
     },
     gradient:
       "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
+  },
+];
+
+/**
+ * @description data for contacts
+ * @file app/project/(components)/status.tsx
+ */
+export const blogs: TBlogCard[] = [
+  {
+    title: "Blog Title",
+    slug: "blog-slug",
+    date: new Date("2022-11-19T15:09:59.443Z"),
   },
 ];
