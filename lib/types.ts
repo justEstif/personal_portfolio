@@ -41,7 +41,7 @@ export type TFooter = {
   github: string;
 };
 
-export type TProject = {
+export type TProjectCard = {
   title: string;
   slug: string;
   gradient: string;
@@ -55,5 +55,4 @@ export type TBlogCard = {
   title: string;
   slug: string;
   date: Date;
-  id: number;
 };

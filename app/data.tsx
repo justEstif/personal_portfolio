@@ -26,7 +26,7 @@ import {
   TFooter,
   TGreetings,
   THead,
-  TProject as TProjectCard,
+  TProjectCard as TProjectCard,
   TSkill,
 } from "lib/types";
 import { getReadingTime } from "lib/utils";
@@ -63,36 +63,6 @@ export const greetings: TGreetings = {
     alt: "Estifanos Beyene Image",
   },
 };
-
-/**
- * @description data for projects
- * @file app/(components)/projects.tsx
- */
-export const featuredProjectCards: TProjectCard[] = [
-  {
-    title: "Name of Project",
-    slug: "project-id",
-    img: {
-      src: "/projects/project.jpg", // in public/projects
-      alt: "Screenshot of project",
-    },
-    gradient:
-      "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
-  },
-];
-
-/**
- * @description data for projects
- * @file app/(components)/blogs.tsx
- */
-export const featuredBlogCards: TBlogCard[] = [
-  {
-    title: "Blog Title",
-    slug: "blog-title",
-    id: 0,
-    date: new Date("2022-11-19T15:09:59.443Z"),
-  },
-];
 
 /**
  * @description data for bio
@@ -178,7 +148,7 @@ export const status: string = "Available for hire";
 export const allProjectCards: TProjectCard[] = [
   {
     title: "Name of Project",
-    slug: "project-slug",
+    slug: "project-id",
     img: {
       src: "/projects/project.jpg", // in public/projects
       alt: "Screenshot of project",
@@ -189,29 +159,25 @@ export const allProjectCards: TProjectCard[] = [
 ];
 
 /**
+ * @description data for projects
+ * @file app/(components)/projects.tsx
+ */
+export const featuredProjectCards: TProjectCard[] = [allProjectCards[0]];
+
+/**
  * @description data for contacts
  * @file app/project/(components)/status.tsx
  */
 export const allBlogCards: TBlogCard[] = [
   {
-    title: "Blog Title",
-    slug: "blog-title",
-    id: 0,
+    title: "Blog",
+    slug: "blog-slug",
     date: new Date("2022-11-19T15:09:59.443Z"),
   },
 ];
 
 /**
- * @description data of blogs
- * @file app/blog/[slug]/page.tsx
+ * @description data for projects
+ * @file app/(components)/blogs.tsx
  */
-export const blogs = [
-  {
-    title: "Blog Title",
-    text: "This is the text of the blog",
-    date: new Date("2022-11-19T15:09:59.443Z"),
-    get readingTime() {
-      return `${getReadingTime(this.text)} min`;
-    },
-  },
-];
+export const featuredBlogCards: TBlogCard[] = [allBlogCards[0]];

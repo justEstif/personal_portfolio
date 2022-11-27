@@ -2,9 +2,9 @@ import React from "react";
 import cn from "classnames";
 import Link from "next/link";
 import Image from "next/image";
-import { TProject } from "lib/types";
+import { TProjectCard } from "lib/types";
 
-function ProjectCard({ slug, title, img, gradient }: TProject) {
+function ProjectCard({ slug, title, img, gradient }: TProjectCard) {
   return (
     <Link
       href={`/project/${slug}`}
