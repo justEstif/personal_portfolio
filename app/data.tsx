@@ -21,12 +21,11 @@ import {
 } from "react-icons/si";
 import {
   TBio,
-  TBlogCard,
   TContact,
   TFooter,
   TGreetings,
   THead,
-  TProjectCard as TProjectCard,
+  TProjectCard,
   TSkill,
 } from "lib/types";
 
@@ -162,25 +161,3 @@ export const allProjectCards: TProjectCard[] = [
  * @file app/(components)/projects.tsx
  */
 export const featuredProjectCards: TProjectCard[] = [allProjectCards[0]];
-
-/**
- * @description data for contacts
- * @file app/project/(components)/status.tsx
- */
-export const allBlogCards: TBlogCard[] = [
-  /**
-   * TODO create a blog metadata type
-   * TODO create a function to read all the markdown in the blog folder
-   */
-  {
-    title: "Lorem Ipsum",
-    slug: "lorem-ipsum",
-    date: new Date("2022-11-19T15:09:59.443Z"),
-  },
-];
-
-/**
- * @description data for projects
- * @file app/(components)/blogs.tsx
- */
-export const featuredBlogCards: TBlogCard[] = [allBlogCards[0]];
