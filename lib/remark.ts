@@ -4,29 +4,46 @@ import html from "remark-html";
 import matter from "gray-matter";
 import { join } from "path";
 import { TBlogMetadata } from "./types";
+import { getReadingTime, shortenDate } from "./utils";
 
-const docsDirectory = join(process.cwd(), "blog");
+const docsDirectory = join(process.cwd(), "docs");
+
 /**
  * @description function to get the metadata
  */
 export const getMetadata = async (slug: string) => {
-  const fullPath = join(docsDirectory, `${slug}.md`);
+  const realSlug = slug.replace(/\.md$/, "");
+  const fullPath = join(docsDirectory, `${realSlug}.md`);
+
   const fileContents = fs.readFileSync(fullPath, "utf8");
-  return matter(fileContents).data as TBlogMetadata; // TODO create type
+  const { data, content } = matter(fileContents);
+  const metadata: TBlogMetadata = {
+    title: data.title,
+    slug: data.slug,
+    date: shortenDate(new Date(data.date)),
+    readingTime: getReadingTime(content),
+  };
+  return metadata;
 };
 
 /**
  * @description function to get the markdown
  */
 export const getDoc = async (slug: string) => {
-  const fullPath = join(docsDirectory, `${slug}.md`);
+  const realSlug = slug.replace(/\.md$/, "");
+  const fullPath = join(docsDirectory, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
-  const matterResult = matter(fileContents); // TODO create type
+  const { data, content } = matter(fileContents); // TODO create type
   const processedContent = await remark()
     .use(html, { sanitize: true })
-    .process(matterResult.content);
+    .process(content);
   const contentHtml = processedContent.toString();
-  const metadata = matterResult.data as TBlogMetadata;
+  const metadata: TBlogMetadata = {
+    title: data.title,
+    slug: data.slug,
+    date: shortenDate(new Date(data.date)),
+    readingTime: getReadingTime(content),
+  };
   return {
     contentHtml,
     metadata,
@@ -38,7 +55,7 @@ export const getDoc = async (slug: string) => {
  */
 export const getAllMeta = async () => {
   const slugs = fs.readdirSync(docsDirectory);
-  const docs = slugs.map((slug) => getMetadata(slug));
+  const docs = await Promise.all(slugs.map(async (slug) => getMetadata(slug)));
   return docs;
 };
 
@@ -47,6 +64,6 @@ export const getAllMeta = async () => {
  */
 export const getAllDocs = async () => {
   const slugs = fs.readdirSync(docsDirectory);
-  const docs = slugs.map((slug) => getDoc(slug));
+  const docs = await Promise.all(slugs.map(async (slug) => getDoc(slug)));
   return docs;
 };
