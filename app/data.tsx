@@ -29,7 +29,6 @@ import {
   TProjectCard as TProjectCard,
   TSkill,
 } from "lib/types";
-import { getReadingTime } from "lib/utils";
 
 /**
  * @description data for header
@@ -169,9 +168,13 @@ export const featuredProjectCards: TProjectCard[] = [allProjectCards[0]];
  * @file app/project/(components)/status.tsx
  */
 export const allBlogCards: TBlogCard[] = [
+  /**
+   * TODO create a blog metadata type
+   * TODO create a function to read all the markdown in the blog folder
+   */
   {
-    title: "Blog",
-    slug: "blog-slug",
+    title: "Lorem Ipsum",
+    slug: "lorem-ipsum",
     date: new Date("2022-11-19T15:09:59.443Z"),
   },
 ];

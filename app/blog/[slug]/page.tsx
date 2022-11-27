@@ -29,7 +29,10 @@ const Page = async ({ params: { slug } }: Props) => {
       <h1 className="mb-8 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
         This is the blog
       </h1>
-      {blog.contentHtml}
+      <article
+        className="space-y-3"
+        dangerouslySetInnerHTML={{ __html: blog.contentHtml }}
+      />
     </div>
   );
 };
