@@ -1,9 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { TBlogCard } from "lib/types";
-import { shortenDate } from "lib/utils";
+import { TBlogMetadata } from "lib/types";
 
-function BlogCard({ slug, title, date }: TBlogCard) {
+function BlogCard({ slug, title, date }: TBlogMetadata) {
   return (
     <Link
       href={`/blog/${slug}`}
@@ -14,13 +13,12 @@ function BlogCard({ slug, title, date }: TBlogCard) {
     >
       <div className="py-3 w-full border-b border-gray-200 transition-all transform dark:border-gray-700 hover:scale-[1.01]">
         <div className="flex justify-between items-center">
-          <h4 className="w-full text-lg font-medium text-gray-800 dark:text-gray-100">
+          <h4 className="text-lg font-medium text-gray-800 dark:text-gray-100">
             {title}
           </h4>
 
-          <p className="mr-2 ml-10 w-20 text-gray-500 dark:text-gray-400">
-            {shortenDate(date)}
-          </p>
+          {/*  TODO use different types of date based on the screen size */}
+          <p className="mr-2 ml-10 text-gray-500 dark:text-gray-400">{date}</p>
         </div>
       </div>
     </Link>

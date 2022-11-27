@@ -15,8 +15,11 @@ const Page = async ({ params: { slug } }: Props) => {
        * TODO: add the minor details
        */}
       <div className="flex justify-between items-center my-6 w-full text-sm leading-8">
-        <p>img/TODO Name/date</p>
-        <p>time to read</p>
+        <div className="flex gap-3">
+          <p>Estifanos Beyene</p>
+          <p>{blog.metadata.date}</p>
+        </div>
+        <p>{blog.metadata.readingTime} min read</p>
       </div>
       <article
         className="space-y-5 text-justify"
