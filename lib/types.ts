@@ -56,3 +56,9 @@ export type TBlogCard = {
   slug: string;
   date: Date;
 };
+
+export type TBlogMetadata = {
+  title: string;
+  slug: string;
+  date: string;
+};

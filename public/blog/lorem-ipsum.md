@@ -1,6 +1,7 @@
 ---
 title: Lorem Ipsum
 slug: lorem-ipsum
+date: August 24, 2022
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan, nisi non malesuada dictum, tortor felis dapibus leo, a rhoncus augue quam id tellus. Donec tempus mi vel est vehicula, eu accumsan mi pellentesque. Maecenas finibus dolor ac lorem placerat, quis varius sapien viverra. Nullam vehicula, orci quis suscipit cursus, lectus sem tristique lectus, in iaculis metus orci et lectus. Curabitur tempus commodo eros, mollis facilisis massa venenatis volutpat. In malesuada dolor vel aliquet maximus. Duis rhoncus, leo quis vulputate accumsan, leo tortor gravida erat, vitae egestas justo mauris eu magna. Cras auctor urna vitae tempor lobortis. Nulla venenatis enim lobortis eros consequat venenatis. Pellentesque pellentesque massa non ultrices vehicula.
