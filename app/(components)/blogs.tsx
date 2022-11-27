@@ -2,12 +2,18 @@ import React from "react";
 import Link from "next/link";
 import BlogCard from "./blogCard";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import { featuredBlogCards } from "../data";
 import { nanoid } from "nanoid";
+import { getAllMeta } from "lib/remark";
+import { shuffleArray } from "lib/utils";
 
 type Props = {};
 
-function Blogs({}: Props) {
+const Blogs = async ({}: Props) => {
+  // pick 3 random blogs
+  const metadatas = await getAllMeta().then((res) =>
+    shuffleArray(res).splice(0, 3)
+  );
+
   return (
     <>
       <h3 className="mt-16 mb-4 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
@@ -15,16 +21,10 @@ function Blogs({}: Props) {
       </h3>
       <p className="mb-4 text-gray-600 dark:text-gray-400">Check out my blog</p>
       <div className="w-full">
-        {featuredBlogCards.map((blog) => (
-          <BlogCard
-            key={nanoid()}
-            slug={blog.slug}
-            date={blog.date}
-            title={blog.title}
-          />
+        {metadatas.map((metadata) => (
+          <BlogCard key={nanoid()} {...metadata} />
         ))}
       </div>
-
       <Link
         target="_blank"
         rel="noopener noreferrer"
@@ -37,6 +37,6 @@ function Blogs({}: Props) {
       <span className="h-16" />
     </>
   );
-}
+};
 
 export default Blogs;
