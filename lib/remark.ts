@@ -5,7 +5,7 @@ import matter from "gray-matter";
 import { join } from "path";
 import { TBlogMetadata } from "./types";
 
-const docsDirectory = join(process.cwd(), "docs");
+const docsDirectory = join(process.cwd(), "blog");
 /**
  * @description function to get the metadata
  */
