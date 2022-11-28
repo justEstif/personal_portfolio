@@ -8,11 +8,9 @@ import { shuffleArray } from "lib/utils";
 
 type Props = {};
 
-const Blogs = async ({}: Props) => {
+const Blogs = ({}: Props) => {
   // pick 3 random blogs
-  const metadatas = await getAllMeta().then((res) =>
-    shuffleArray(res).splice(0, 3)
-  );
+  const metadatas = shuffleArray(getAllMeta()).splice(0, 3);
 
   return (
     <>
