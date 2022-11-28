@@ -13,7 +13,7 @@ function Projects({}: Props) {
       <h3 className="mb-6 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
         Featured Projects
       </h3>
-      <div className="flex flex-wrap gap-6">
+      <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
         {featuredProjectCards.map((project) => (
           <ProjectCard key={nanoid()} {...project} />
         ))}
