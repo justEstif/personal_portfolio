@@ -19,6 +19,7 @@ export const getMetadata = async (slug: string) => {
   const { data, content } = matter(fileContents);
   const metadata: TBlogMetadata = {
     title: data.title,
+    author: data.author,
     slug: data.slug,
     date: shortenDate(new Date(data.date)),
     readingTime: getReadingTime(content),
@@ -40,6 +41,7 @@ export const getDoc = async (slug: string) => {
   const contentHtml = processedContent.toString();
   const metadata: TBlogMetadata = {
     title: data.title,
+    author: data.author,
     slug: data.slug,
     date: shortenDate(new Date(data.date)),
     readingTime: getReadingTime(content),

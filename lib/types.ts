@@ -53,6 +53,7 @@ export type TProjectCard = {
 
 export type TBlogMetadata = {
   title: string;
+  author: string;
   slug: string;
   date: string;
   readingTime: number;

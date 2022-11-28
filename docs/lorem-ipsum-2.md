@@ -1,7 +1,7 @@
 ---
-title: Lorem Ipsum
+title: Lorem Ipsum 2
 author: Estifanos Beyene
-slug: lorem-ipsum
+slug: lorem-ipsum-2
 date: "2022-09-24"
 ---
 
