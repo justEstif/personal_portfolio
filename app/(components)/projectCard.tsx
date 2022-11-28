@@ -1,13 +1,11 @@
 import React from "react";
 import cn from "classnames";
-import Link from "next/link";
 import Image from "next/image";
 import { TProjectCard } from "lib/types";
 
-function ProjectCard({ slug, title, img, gradient }: TProjectCard) {
+function ProjectCard({ title, img, gradient, tech, link }: TProjectCard) {
   return (
-    <Link
-      href={`/projects/${slug}`}
+    <div
       className={cn(
         "flex flex-col gap-3 justify-center items-center p-4 rounded-xl border-4 border-transparent border-solid hover:scale-[1.01] transition-all transform",
         gradient
@@ -23,8 +21,8 @@ function ProjectCard({ slug, title, img, gradient }: TProjectCard) {
       <h4 className="text-lg font-medium tracking-tight text-gray-900 dark:text-gray-50">
         {title}
       </h4>
-      <p>Some project details</p>
-    </Link>
+      <div>{tech.map((el) => el)}</div>
+    </div>
   );
 }
 

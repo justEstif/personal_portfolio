@@ -28,6 +28,7 @@ import {
   TProjectCard,
   TSkill,
 } from "lib/types";
+import { nanoid } from "nanoid";
 
 /**
  * @description data for header
@@ -145,12 +146,17 @@ export const status: string = "Available for hire";
  */
 export const allProjectCards: TProjectCard[] = [
   {
-    title: "Name of Project",
+    title: "Members Only",
     slug: "project-id",
+    link: {
+      github: "https://github.com/justEstif/project_members_only_client",
+      live: "https://members-only-client.onrender.com/",
+    },
     img: {
       src: "/projects/project.jpg", // in public/projects
       alt: "Screenshot of project",
     },
+    tech: [<SiExpress key={nanoid()} />],
     gradient:
       "border-gradient-br-light-purple-gray-50  dark:border-gradient-br-light-purple-gray-900",
   },
