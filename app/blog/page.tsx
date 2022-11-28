@@ -12,6 +12,7 @@ const Page = async ({}: Props) => {
         Blog
       </h1>
 
+      {/* TODO Add Search Function */}
       <div className="w-full">
         {metadatas.map((metadata) => (
           <BlogCard key={nanoid()} {...metadata} />
