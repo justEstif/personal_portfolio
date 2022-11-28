@@ -11,12 +11,9 @@ const Page = async ({ params: { slug } }: Props) => {
       <h1 className="mb-8 text-3xl font-bold tracking-tight text-black md:text-5xl dark:text-white">
         This is the blog
       </h1>
-      {/**
-       * TODO: add the minor details
-       */}
       <div className="flex justify-between items-center my-6 w-full text-sm leading-8">
         <div className="flex gap-3">
-          <p>Estifanos Beyene</p>
+          <p>{blog.metadata.author}</p>
           <p>{blog.metadata.date}</p>
         </div>
         <p>{blog.metadata.readingTime} min read</p>

@@ -16,8 +16,6 @@ function BlogCard({ slug, title, date }: TBlogMetadata) {
           <h4 className="text-lg font-medium text-gray-800 dark:text-gray-100">
             {title}
           </h4>
-
-          {/*  TODO use different types of date based on the screen size */}
           <p className="mr-2 ml-10 text-gray-500 dark:text-gray-400">{date}</p>
         </div>
       </div>
