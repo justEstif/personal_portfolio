@@ -7,7 +7,7 @@ import { TProjectCard } from "lib/types";
 function ProjectCard({ slug, title, img, gradient }: TProjectCard) {
   return (
     <Link
-      href={`/project/${slug}`}
+      href={`/projects/${slug}`}
       className={cn(
         "flex flex-col gap-3 justify-center items-center p-4 rounded-xl border-4 border-transparent border-solid hover:scale-[1.01] transition-all transform",
         gradient
