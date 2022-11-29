@@ -43,11 +43,12 @@ export type TFooter = {
 
 export type TProjectCard = {
   title: string;
-  tech: JSX.Element[];
-  link: {
-    github: string;
-    live?: string;
-  };
+  description: string;
+  techs: JSX.Element[];
+  links: {
+    link: string;
+    icon: JSX.Element;
+  }[];
   img: {
     src: string;
     alt: string;

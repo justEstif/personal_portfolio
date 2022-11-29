@@ -147,39 +147,18 @@ export const status: string = "Available for hire";
 export const allProjectCards: TProjectCard[] = [
   {
     title: "Members Only",
-    link: {
-      github: "https://github.com/justEstif/project_members_only_client",
-      live: "https://members-only-client.onrender.com/",
-    },
+    description: "This is the description",
+    links: [
+      {
+        link: "https://github.com/justEstif/project_members_only_client",
+        icon: <SiGithub />,
+      },
+    ],
     img: {
       src: "/projects/project.jpg", // in public/projects
       alt: "Screenshot of project",
     },
-    tech: [<SiExpress key={nanoid()} />],
-  },
-  {
-    title: "Members Only",
-    link: {
-      github: "https://github.com/justEstif/project_members_only_client",
-      live: "https://members-only-client.onrender.com/",
-    },
-    img: {
-      src: "/projects/project.jpg", // in public/projects
-      alt: "Screenshot of project",
-    },
-    tech: [<SiExpress key={nanoid()} />],
-  },
-  {
-    title: "Members Only",
-    link: {
-      github: "https://github.com/justEstif/project_members_only_client",
-      live: "https://members-only-client.onrender.com/",
-    },
-    img: {
-      src: "/projects/project.jpg", // in public/projects
-      alt: "Screenshot of project",
-    },
-    tech: [<SiExpress key={nanoid()} />],
+    techs: [<SiExpress key={nanoid()} />],
   },
 ];
 
@@ -187,4 +166,7 @@ export const allProjectCards: TProjectCard[] = [
  * @description data for projects
  * @file app/(components)/projects.tsx
  */
-export const featuredProjectCards: TProjectCard[] = allProjectCards;
+export const featuredProjectCards: TProjectCard[] = [
+  allProjectCards[0],
+  allProjectCards[0],
+];
