@@ -1,3 +1,13 @@
+# Personal Portfolio
+
+- [Live](https://personal-portfolio-nine-neon.vercel.app/)
+- [GitHub](https://github.com/justEstif/personal_portfolio)
+
+## Using
+
+- Tailwind
+- Next.JS
+
 - When you hover the image:
 
   - grayscale image
@@ -7,5 +17,4 @@
 
   - show name
 
-- Think about how to handle the project card on small screen
-
+- [ ] Handle project card on small screens
