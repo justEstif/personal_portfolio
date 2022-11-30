@@ -91,24 +91,9 @@ module.exports = {
         },
       }),
     },
-
-    linearBorderGradients: ({}) => ({
-      colors: {
-        "green-purple": ["#6EE7B7", "#3B82F6", "#9333EA"],
-        "yellow-red": ["#FDE68A", "#FCA5A5", "#FECACA"],
-        "light-purple": ["#D8B4FE", "#818CF8"],
-      },
-      background: {
-        "gray-50": "#F9FAFB",
-        "gray-900": "#111111",
-      },
-    }),
   },
   variants: {
     typography: ["dark"],
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    require("tailwindcss-border-gradient-radius"),
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };
