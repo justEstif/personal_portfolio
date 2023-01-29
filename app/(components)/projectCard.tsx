@@ -26,9 +26,7 @@ function ProjectCard({ title, description, img, techs, links }: TProjectCard) {
             ))}
           </div>
         </div>
-
-        <p className="flex-1 leading-7">{description}</p>
-
+        <p className="flex-1 mb-4 leading-7">{description}</p>
         <div className="flex flex-col justify-between items-center pt-5 border-t-2 border-t-blue-600">
           <div className="flex gap-2">{techs.map((tech) => tech)}</div>
         </div>
