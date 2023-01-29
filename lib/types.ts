@@ -54,11 +54,3 @@ export type TProjectCard = {
     alt: string;
   };
 };
-
-export type TBlogMetadata = {
-  title: string;
-  author: string;
-  slug: string;
-  date: string;
-  readingTime: number;
-};

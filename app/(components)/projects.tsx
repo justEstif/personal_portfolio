@@ -7,13 +7,13 @@ import ProjectCard from "./projectCard";
 
 type Props = {};
 
-function Projects({}: Props) {
+function Projects({ }: Props) {
   return (
     <>
       <h3 className="mb-6 text-2xl font-bold tracking-tight text-black md:text-4xl dark:text-white">
         Featured Projects
       </h3>
-      <div className="grid grid-cols-2 gap-6 md:grid-cols-3">
+      <div className="flex flex-col gap-6 w-full">
         {featuredProjectCards.map((project) => (
           <ProjectCard key={nanoid()} {...project} />
         ))}

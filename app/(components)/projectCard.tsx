@@ -6,30 +6,27 @@ import { nanoid } from "nanoid";
 
 function ProjectCard({ title, description, img, techs, links }: TProjectCard) {
   return (
-    <div className="flex flex-col justify-center items-center hover:gap-4 hover:justify-start group">
-      <Image
-        src={img.src}
-        alt={img.alt}
-        width={500}
-        height={500}
-        className="group-hover:collapse"
-      />
-
-      <div className="flex flex-col justify-center items-center">
-        <p className="group-hover:text-lg">{title}</p>
-        <div>{techs.map((tech) => tech)}</div>
+    <div className="flex flex-col w-full rounded sm:flex-row">
+      <div className="overflow-hidden relative flex-1 w-full h-10 sm:h-64 bg-black/70 group dark:bg-white/30">
+        <Image
+          src={img.src}
+          alt={img.alt}
+          fill={true}
+          className="block object-cover w-full mix-blend-overlay"
+        />
       </div>
-
-      <div className="flex flex-col gap-4 px-2 group-hover:visible collapse">
-        <p className="text-center">{description}</p>
-        <div className="flex gap-4 justify-center items-center text-xl">
-          {links.map((link) => {
-            return (
+      <div className="flex-1 shadow">
+        <div className="flex flex-col justify-between items-center">
+          <div className="flex gap-2">
+            {links.map((link) => (
               <Link href={link.link} key={nanoid()}>
                 {link.icon}
               </Link>
-            );
-          })}
+            ))}
+          </div>
+          <p className="text-xl">{title}</p>
+          <p className="text-center">{description}</p>
+          <div className="flex gap-2">{techs.map((tech) => tech)}</div>
         </div>
       </div>
     </div>

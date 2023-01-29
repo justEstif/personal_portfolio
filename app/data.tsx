@@ -14,11 +14,14 @@ import {
   SiNpm,
   SiPostgresql,
   SiReact,
-  SiSqlite,
   SiTailwindcss,
   SiTypescript,
   SiYarn,
+  SiVite,
+  SiLinkedin,
+  SiChakraui,
 } from "react-icons/si";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import {
   TBio,
   TContact,
@@ -73,16 +76,12 @@ export const bios: TBio[] = [
     description: "Born in Addis Ababa, Ethiopia",
   },
   {
-    year: "2021",
-    description: "Learning full stack development from The Odin Project",
-  },
-  {
-    year: "2021",
+    year: "2022",
     description: "Graduated with degree in Engineering and Math",
   },
   {
     year: "2022",
-    description: "Working as a freelance web developer",
+    description: "Learning full stack development from The Odin Project",
   },
 ];
 
@@ -102,6 +101,12 @@ export const contacts: TContact[] = [
     username: "justEstif",
     link: "https://github.com/justEstif",
     icon: <SiGithub />,
+  },
+  {
+    name: "LinkedIn",
+    username: "Estifanos Beyene",
+    link: "https://www.linkedin.com/in/estifanos-beyene-62940b1bb/",
+    icon: <SiLinkedin />,
   },
   {
     name: "Discord",
@@ -125,7 +130,6 @@ export const skills: TSkill[] = [
   { name: "TypeScript", icon: <SiTypescript className="block text-8xl" /> },
   { name: "Next.JS", icon: <SiNextdotjs className="block text-8xl" /> },
   { name: "PostgreSQL", icon: <SiPostgresql className="block text-8xl" /> },
-  { name: "SQLite", icon: <SiSqlite className="block text-8xl" /> },
   { name: "TailwindCSS", icon: <SiTailwindcss className="block text-8xl" /> },
   { name: "Neovim", icon: <SiNeovim className="block text-8xl" /> },
   { name: "Jest", icon: <SiJest className="block text-8xl" /> },
@@ -147,8 +151,13 @@ export const status: string = "Available for hire";
 export const allProjectCards: TProjectCard[] = [
   {
     title: "Members Only",
-    description: "This is the description",
+    description:
+      "A message board that limits the information based on jwt token.",
     links: [
+      {
+        link: "https://projectmembersonlyclient-production-b74e.up.railway.app/",
+        icon: <FaExternalLinkAlt />,
+      },
       {
         link: "https://github.com/justEstif/project_members_only_client",
         icon: <SiGithub />,
@@ -158,7 +167,204 @@ export const allProjectCards: TProjectCard[] = [
       src: "/projects/project.jpg", // in public/projects
       alt: "Screenshot of project",
     },
-    techs: [<SiExpress key={nanoid()} />],
+    techs: [
+      <SiExpress className="w-8 h-8" key={nanoid()} />,
+      <SiMongodb className="w-8 h-8" key={nanoid()} />,
+      <SiReact className="w-8 h-8" key={nanoid()} />,
+      <SiTypescript className="w-8 h-8" key={nanoid()} />,
+      <SiVite className="w-8 h-8" key={nanoid()} />,
+    ],
+  },
+  {
+    title: "Netflix Clone",
+    description:
+      "A Netflix clone website with database of information related to movies, television programs and shows. Features: adding movies, updating/deleting movies, user registration and authentication, submitting reviews for movies, updating user info etc.",
+    links: [
+      {
+        link: "https://project-final-javascript-id2lndy4a-justestif.vercel.app/",
+        icon: <FaExternalLinkAlt />,
+      },
+      {
+        link: "https://github.com/justEstif/project-final-javascript",
+        icon: <SiGithub />,
+      },
+    ],
+    img: {
+      src: "/projects/netflix.png", // in public/projects
+      alt: "Screenshot of project",
+    },
+    techs: [<SiNextdotjs key={nanoid()} />],
+  },
+
+  {
+    title: "Calculator",
+    description:
+      "A simple calculator manner of those calculators found at grocery stores. The layout of the app was crafted with CSS grid.",
+    links: [
+      {
+        link: "https://project-calculator-khaki.vercel.app/",
+        icon: <FaExternalLinkAlt />,
+      },
+      {
+        link: "https://github.com/justEstif/project_calculator",
+        icon: <SiGithub />,
+      },
+    ],
+    img: {
+      src: "/projects/calculator.png",
+      alt: "Screenshot of calculator project",
+    },
+    techs: [
+      <SiJavascript key={nanoid()} />,
+      <SiHtml5 key={nanoid()} />,
+      <SiCss3 key={nanoid()} />,
+    ],
+  },
+  {
+    title: "Library App",
+    description:
+      "An application for storing book information using JavaScript. Using use Local Storage to store the bookmarks",
+    links: [
+      {
+        link: "https://project-library-psi.vercel.app/",
+        icon: <FaExternalLinkAlt />,
+      },
+
+      {
+        link: "https://github.com/justEstif/project_library",
+        icon: <FaGithub />,
+      },
+    ],
+    img: {
+      src: "/projects/library.png",
+      alt: "Screenshot of library",
+    },
+    techs: [
+      <SiJavascript key={nanoid()} />,
+      <SiHtml5 key={nanoid()} />,
+      <SiCss3 key={nanoid()} />,
+    ],
+  },
+  {
+    title: "Tic-tac-toe",
+    description:
+      "Play the classic Tic-Tac-Toe game (also called Noughts and Crosses) against an AI.",
+    links: [
+      {
+        link: "https://project-tic-tac-toe-smoky.vercel.app/",
+        icon: <FaExternalLinkAlt />,
+      },
+
+      {
+        link: "https://github.com/justEstif/project_tic_tac_toe",
+        icon: <FaGithub />,
+      },
+    ],
+    img: {
+      src: "/projects/tic-tac-toe.png",
+      alt: "Screenshot of tic-tac-toe",
+    },
+    techs: [
+      <SiJavascript key={nanoid()} />,
+      <SiHtml5 key={nanoid()} />,
+      <SiCss3 key={nanoid()} />,
+    ],
+  },
+  {
+    title: "Etch-a-sketch",
+    description:
+      "A browser version of something between a sketchpad and an Etch-A-Sketch.",
+    links: [
+      {
+        link: "https://project-etch-a-sketch-8zi57xkve-justestif.vercel.app/",
+        icon: <FaExternalLinkAlt />,
+      },
+
+      {
+        link: "https://github.com/justEstif/project-Etch-a-Sketch",
+        icon: <FaGithub />,
+      },
+    ],
+    img: {
+      src: "/projects/etch-a-sketch.png",
+      alt: "Screenshot of etch-a-sketch",
+    },
+    techs: [
+      <SiJavascript key={nanoid()} />,
+      <SiHtml5 key={nanoid()} />,
+      <SiCss3 key={nanoid()} />,
+    ],
+  },
+  {
+    title: "Restaurant page",
+    description:
+      "Created an entire web page from a design using the provided design.",
+    links: [
+      {
+        link: "https://project-restaurant-page-4b4bl2dkn-justestif.vercel.app/",
+        icon: <FaExternalLinkAlt />,
+      },
+
+      {
+        link: "https://github.com/justEstif/project_Restaurant_page",
+        icon: <FaGithub />,
+      },
+    ],
+    img: {
+      src: "/projects/restaurant-page.png",
+      alt: "Screenshot of project",
+    },
+    techs: [],
+  },
+
+  {
+    title: "Weather App",
+    description:
+      "Created a weather forecast site using the weather API. Able to search for a specific location and toggle displaying the data in Fahrenheit or Celsius.",
+    links: [
+      {
+        link: "https://odin-weather.vercel.app/",
+        icon: <FaExternalLinkAlt />,
+      },
+
+      {
+        link: "https://github.com/justEstif/odin_weather",
+        icon: <FaGithub />,
+      },
+    ],
+    img: {
+      src: "/projects/weather-app.png",
+      alt: "Screenshot of weather app",
+    },
+    techs: [
+      <SiReact key={nanoid()} />,
+      <SiNextdotjs key={nanoid()} />,
+      <SiChakraui key={nanoid()} />,
+    ],
+  },
+  {
+    title: "Sign up form",
+    description: "A sign-up form for an imaginary service.",
+    links: [
+      {
+        link: "https://project-sign-up-form-five.vercel.app/",
+        icon: <FaExternalLinkAlt />,
+      },
+
+      {
+        link: "https://github.com/justEstif/project_sign-up_form",
+        icon: <FaGithub />,
+      },
+    ],
+    img: {
+      src: "/projects/sign-up-form.png",
+      alt: "Screenshot of sign up form",
+    },
+    techs: [
+      <SiJavascript key={nanoid()} />,
+      <SiHtml5 key={nanoid()} />,
+      <SiCss3 key={nanoid()} />,
+    ],
   },
 ];
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { contacts } from "app/data";
 type Props = {};
 
-const Contact = ({}: Props) => {
+const Contact = ({ }: Props) => {
   return (
     <section className="mb-8">
       <h2 className="mb-6 text-4xl font-bold tracking-tight text-black dark:text-white">
