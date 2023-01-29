@@ -15,17 +15,21 @@ function ProjectCard({ title, description, img, techs, links }: TProjectCard) {
           className="block object-cover w-full mix-blend-overlay"
         />
       </div>
-      <div className="flex-1 shadow">
-        <div className="flex flex-col justify-between items-center">
-          <div className="flex gap-2">
+      <div className="flex flex-col flex-1 py-4 px-6 bg-gray-200 dark:bg-gray-800">
+        <div className="flex justify-between items-baseline mb-4">
+          <p className="text-xl">{title}</p>
+          <div className="flex gap-5">
             {links.map((link) => (
               <Link href={link.link} key={nanoid()}>
                 {link.icon}
               </Link>
             ))}
           </div>
-          <p className="text-xl">{title}</p>
-          <p className="text-center">{description}</p>
+        </div>
+
+        <p className="flex-1 leading-7">{description}</p>
+
+        <div className="flex flex-col justify-between items-center pt-5 border-t-2 border-t-blue-600">
           <div className="flex gap-2">{techs.map((tech) => tech)}</div>
         </div>
       </div>

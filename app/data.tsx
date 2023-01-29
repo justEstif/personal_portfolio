@@ -20,8 +20,9 @@ import {
   SiVite,
   SiLinkedin,
   SiChakraui,
+  SiFirebase,
 } from "react-icons/si";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import {
   TBio,
   TContact,
@@ -156,58 +157,63 @@ export const allProjectCards: TProjectCard[] = [
     links: [
       {
         link: "https://projectmembersonlyclient-production-b74e.up.railway.app/",
-        icon: <FaExternalLinkAlt />,
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
       },
       {
         link: "https://github.com/justEstif/project_members_only_client",
-        icon: <SiGithub />,
+        icon: <SiGithub className="w-5 h-5" />,
       },
     ],
     img: {
-      src: "/projects/project.jpg", // in public/projects
+      src: "/projects/members-only.png",
       alt: "Screenshot of project",
     },
     techs: [
-      <SiExpress className="w-8 h-8" key={nanoid()} />,
-      <SiMongodb className="w-8 h-8" key={nanoid()} />,
-      <SiReact className="w-8 h-8" key={nanoid()} />,
-      <SiTypescript className="w-8 h-8" key={nanoid()} />,
-      <SiVite className="w-8 h-8" key={nanoid()} />,
+      <SiExpress className="w-6 h-6" key={nanoid()} />,
+      <SiMongodb className="w-6 h-6" key={nanoid()} />,
+      <SiReact className="w-6 h-6" key={nanoid()} />,
+      <SiTypescript className="w-6 h-6" key={nanoid()} />,
+      <SiVite className="w-6 h-6" key={nanoid()} />,
     ],
   },
   {
     title: "Netflix Clone",
     description:
-      "A Netflix clone website with database of information related to movies, television programs and shows. Features: adding movies, updating/deleting movies, user registration and authentication, submitting reviews for movies, updating user info etc.",
+      "A Netflix clone website with database of information related to movies, television programs and shows.",
     links: [
       {
         link: "https://project-final-javascript-id2lndy4a-justestif.vercel.app/",
-        icon: <FaExternalLinkAlt />,
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
       },
       {
         link: "https://github.com/justEstif/project-final-javascript",
-        icon: <SiGithub />,
+        icon: <SiGithub className="w-5 h-5" />,
       },
     ],
     img: {
       src: "/projects/netflix.png", // in public/projects
       alt: "Screenshot of project",
     },
-    techs: [<SiNextdotjs key={nanoid()} />],
+    techs: [
+      <SiReact className="w-6 h-6" key={nanoid()} />,
+      <SiTypescript className="w-6 h-6" key={nanoid()} />,
+      <SiNextdotjs className="w-6 h-6" key={nanoid()} />,
+      <SiFirebase className="w-6 h-6" key={nanoid()} />,
+      <SiTailwindcss className="w-6 h-6" key={nanoid()} />,
+    ],
   },
 
   {
     title: "Calculator",
-    description:
-      "A simple calculator manner of those calculators found at grocery stores. The layout of the app was crafted with CSS grid.",
+    description: "A simple calculator using CSS grid for layout.",
     links: [
       {
         link: "https://project-calculator-khaki.vercel.app/",
-        icon: <FaExternalLinkAlt />,
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
       },
       {
         link: "https://github.com/justEstif/project_calculator",
-        icon: <SiGithub />,
+        icon: <SiGithub className="w-5 h-5" />,
       },
     ],
     img: {
@@ -215,9 +221,9 @@ export const allProjectCards: TProjectCard[] = [
       alt: "Screenshot of calculator project",
     },
     techs: [
-      <SiJavascript key={nanoid()} />,
-      <SiHtml5 key={nanoid()} />,
-      <SiCss3 key={nanoid()} />,
+      <SiJavascript key={nanoid()} className="w-6 h-6" />,
+      <SiHtml5 key={nanoid()} className="w-6 h-6" />,
+      <SiCss3 key={nanoid()} className="w-6 h-6" />,
     ],
   },
   {
@@ -227,12 +233,12 @@ export const allProjectCards: TProjectCard[] = [
     links: [
       {
         link: "https://project-library-psi.vercel.app/",
-        icon: <FaExternalLinkAlt />,
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
       },
 
       {
         link: "https://github.com/justEstif/project_library",
-        icon: <FaGithub />,
+        icon: <SiGithub className="w-5 h-5" />,
       },
     ],
     img: {
@@ -240,9 +246,9 @@ export const allProjectCards: TProjectCard[] = [
       alt: "Screenshot of library",
     },
     techs: [
-      <SiJavascript key={nanoid()} />,
-      <SiHtml5 key={nanoid()} />,
-      <SiCss3 key={nanoid()} />,
+      <SiJavascript key={nanoid()} className="w-6 h-6" />,
+      <SiHtml5 key={nanoid()} className="w-6 h-6" />,
+      <SiCss3 key={nanoid()} className="w-6 h-6" />,
     ],
   },
   {
@@ -252,12 +258,12 @@ export const allProjectCards: TProjectCard[] = [
     links: [
       {
         link: "https://project-tic-tac-toe-smoky.vercel.app/",
-        icon: <FaExternalLinkAlt />,
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
       },
 
       {
         link: "https://github.com/justEstif/project_tic_tac_toe",
-        icon: <FaGithub />,
+        icon: <SiGithub className="w-5 h-5" />,
       },
     ],
     img: {
@@ -265,9 +271,9 @@ export const allProjectCards: TProjectCard[] = [
       alt: "Screenshot of tic-tac-toe",
     },
     techs: [
-      <SiJavascript key={nanoid()} />,
-      <SiHtml5 key={nanoid()} />,
-      <SiCss3 key={nanoid()} />,
+      <SiJavascript key={nanoid()} className="w-6 h-6" />,
+      <SiHtml5 key={nanoid()} className="w-6 h-6" />,
+      <SiCss3 key={nanoid()} className="w-6 h-6" />,
     ],
   },
   {
@@ -277,12 +283,12 @@ export const allProjectCards: TProjectCard[] = [
     links: [
       {
         link: "https://project-etch-a-sketch-8zi57xkve-justestif.vercel.app/",
-        icon: <FaExternalLinkAlt />,
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
       },
 
       {
         link: "https://github.com/justEstif/project-Etch-a-Sketch",
-        icon: <FaGithub />,
+        icon: <SiGithub className="w-5 h-5" />,
       },
     ],
     img: {
@@ -290,9 +296,9 @@ export const allProjectCards: TProjectCard[] = [
       alt: "Screenshot of etch-a-sketch",
     },
     techs: [
-      <SiJavascript key={nanoid()} />,
-      <SiHtml5 key={nanoid()} />,
-      <SiCss3 key={nanoid()} />,
+      <SiHtml5 key={nanoid()} className="w-6 h-6" />,
+      <SiCss3 key={nanoid()} className="w-6 h-6" />,
+      <SiJavascript key={nanoid()} className="w-6 h-6" />,
     ],
   },
   {
@@ -302,34 +308,37 @@ export const allProjectCards: TProjectCard[] = [
     links: [
       {
         link: "https://project-restaurant-page-4b4bl2dkn-justestif.vercel.app/",
-        icon: <FaExternalLinkAlt />,
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
       },
 
       {
         link: "https://github.com/justEstif/project_Restaurant_page",
-        icon: <FaGithub />,
+        icon: <SiGithub className="w-5 h-5" />,
       },
     ],
     img: {
       src: "/projects/restaurant-page.png",
       alt: "Screenshot of project",
     },
-    techs: [],
+    techs: [
+      <SiHtml5 key={nanoid()} className="w-6 h-6" />,
+      <SiCss3 key={nanoid()} className="w-6 h-6" />,
+      <SiJavascript key={nanoid()} className="w-6 h-6" />,
+    ],
   },
 
   {
     title: "Weather App",
-    description:
-      "Created a weather forecast site using the weather API. Able to search for a specific location and toggle displaying the data in Fahrenheit or Celsius.",
+    description: "Created a weather forecast site using the weather API.",
     links: [
       {
         link: "https://odin-weather.vercel.app/",
-        icon: <FaExternalLinkAlt />,
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
       },
 
       {
         link: "https://github.com/justEstif/odin_weather",
-        icon: <FaGithub />,
+        icon: <SiGithub className="w-5 h-5" />,
       },
     ],
     img: {
@@ -337,9 +346,9 @@ export const allProjectCards: TProjectCard[] = [
       alt: "Screenshot of weather app",
     },
     techs: [
-      <SiReact key={nanoid()} />,
-      <SiNextdotjs key={nanoid()} />,
-      <SiChakraui key={nanoid()} />,
+      <SiReact key={nanoid()} className="w-6 h-6" />,
+      <SiNextdotjs key={nanoid()} className="w-6 h-6" />,
+      <SiChakraui key={nanoid()} className="w-6 h-6" />,
     ],
   },
   {
@@ -348,12 +357,12 @@ export const allProjectCards: TProjectCard[] = [
     links: [
       {
         link: "https://project-sign-up-form-five.vercel.app/",
-        icon: <FaExternalLinkAlt />,
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
       },
 
       {
         link: "https://github.com/justEstif/project_sign-up_form",
-        icon: <FaGithub />,
+        icon: <SiGithub className="w-5 h-5" />,
       },
     ],
     img: {
@@ -361,9 +370,9 @@ export const allProjectCards: TProjectCard[] = [
       alt: "Screenshot of sign up form",
     },
     techs: [
-      <SiJavascript key={nanoid()} />,
-      <SiHtml5 key={nanoid()} />,
-      <SiCss3 key={nanoid()} />,
+      <SiJavascript key={nanoid()} className="w-6 h-6" />,
+      <SiHtml5 key={nanoid()} className="w-6 h-6" />,
+      <SiCss3 key={nanoid()} className="w-6 h-6" />,
     ],
   },
 ];
@@ -373,6 +382,6 @@ export const allProjectCards: TProjectCard[] = [
  * @file app/(components)/projects.tsx
  */
 export const featuredProjectCards: TProjectCard[] = [
-  allProjectCards[0],
-  allProjectCards[0],
+  allProjectCards[1],
+  allProjectCards[2],
 ];
