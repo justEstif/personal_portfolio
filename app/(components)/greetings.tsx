@@ -29,17 +29,26 @@ function Greetings() {
         </Link>
       </div>
 
-      <div className="relative mb-8">
+      <div className="overflow-hidden relative w-full h-64">
         <Image
-          alt={greetings.img.alt}
-          height={176}
-          width={176}
           src={greetings.img.src}
-          sizes="30vw"
-          priority
-          className="rounded-full filter grayscale"
+          alt={greetings.img.alt}
+          fill={true}
+          className="block object-contain w-full"
         />
       </div>
+
+      {/* <div className="relative mb-8"> */}
+      {/*   <Image */}
+      {/*     alt={greetings.img.alt} */}
+      {/*     height={176} */}
+      {/*     width={176} */}
+      {/*     src={greetings.img.src} */}
+      {/*     sizes="30vw" */}
+      {/*     priority */}
+      {/*     className="w-36 rounded-full filter grayscale" */}
+      {/*   /> */}
+      {/* </div> */}
     </div>
   );
 }
