@@ -151,6 +151,32 @@ export const status: string = "Available for hire";
  */
 export const allProjectCards: TProjectCard[] = [
   {
+    title: "Blog Api",
+    description:
+      "A full stack blog website with post and commenting functionality.",
+    links: [
+      {
+        link: "https://project-blog-api-client-production.up.railway.app/",
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
+      },
+      {
+        link: "https://github.com/justEstif/project-blog-api-client",
+        icon: <SiGithub className="w-5 h-5" />,
+      },
+    ],
+    img: {
+      src: "/projects/blog-api.png",
+      alt: "Screenshot of blog",
+    },
+    techs: [
+      <SiExpress className="w-6 h-6" key={nanoid()} />,
+      <SiMongodb className="w-6 h-6" key={nanoid()} />,
+      <SiReact className="w-6 h-6" key={nanoid()} />,
+      <SiTypescript className="w-6 h-6" key={nanoid()} />,
+      <SiVite className="w-6 h-6" key={nanoid()} />,
+    ],
+  },
+  {
     title: "Members Only",
     description:
       "A message board that limits the information based on jwt token.",
@@ -166,7 +192,7 @@ export const allProjectCards: TProjectCard[] = [
     ],
     img: {
       src: "/projects/members-only.png",
-      alt: "Screenshot of project",
+      alt: "Screenshot of members-only",
     },
     techs: [
       <SiExpress className="w-6 h-6" key={nanoid()} />,
@@ -192,7 +218,7 @@ export const allProjectCards: TProjectCard[] = [
     ],
     img: {
       src: "/projects/netflix.png", // in public/projects
-      alt: "Screenshot of project",
+      alt: "Screenshot of netflix clone",
     },
     techs: [
       <SiReact className="w-6 h-6" key={nanoid()} />,
@@ -382,6 +408,7 @@ export const allProjectCards: TProjectCard[] = [
  * @file app/(components)/projects.tsx
  */
 export const featuredProjectCards: TProjectCard[] = [
+  allProjectCards[0],
   allProjectCards[1],
   allProjectCards[2],
 ];
