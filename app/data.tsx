@@ -24,7 +24,6 @@ import {
 } from "react-icons/si";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import {
-  TBio,
   TContact,
   TFooter,
   TGreetings,
@@ -60,31 +59,12 @@ export const greetings: TGreetings = {
   name: "Estifanos Beyene",
   email: "estifanosbeyene21@gmail.com",
   title:
-    "A passionate full stack developer building web applications with typescript, reactjs, express, nextjs and some other cool libraries and frameworks.",
+    "A passionate web developer building web applications with typescript, reactjs, express, nextjs.",
   img: {
     src: "/avatar.jpg",
     alt: "Estifanos Beyene Image",
   },
 };
-
-/**
- * @description data for bio
- * @file app/about/(components)/bio.tsx
- */
-export const bios: TBio[] = [
-  {
-    year: "2000",
-    description: "Born in Addis Ababa, Ethiopia",
-  },
-  {
-    year: "2022",
-    description: "Graduated with degree in Engineering and Math",
-  },
-  {
-    year: "2022",
-    description: "Learning full stack development from The Odin Project",
-  },
-];
 
 /**
  * @description data for contacts
@@ -200,6 +180,31 @@ export const allProjectCards: TProjectCard[] = [
       <SiReact className="w-6 h-6" key={nanoid()} />,
       <SiTypescript className="w-6 h-6" key={nanoid()} />,
       <SiVite className="w-6 h-6" key={nanoid()} />,
+    ],
+  },
+  {
+    title: "Instagram Clone",
+    description:
+      "An Instagram clone website with user follow, post and like functionality.",
+    links: [
+      {
+        link: "https://project-js-final-instagram-clone.vercel.app/",
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
+      },
+      {
+        link: "https://github.com/justEstif/project-js-final-instagram-clone",
+        icon: <SiGithub className="w-5 h-5" />,
+      },
+    ],
+    img: {
+      src: "/projects/instagram.png", // in public/projects
+      alt: "Screenshot of netflix clone",
+    },
+    techs: [
+      <SiReact className="w-6 h-6" key={nanoid()} />,
+      <SiNextdotjs className="w-6 h-6" key={nanoid()} />,
+      <SiFirebase className="w-6 h-6" key={nanoid()} />,
+      <SiTailwindcss className="w-6 h-6" key={nanoid()} />,
     ],
   },
   {

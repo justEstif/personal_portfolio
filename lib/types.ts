@@ -8,11 +8,6 @@ export type TGreetings = {
   };
 };
 
-export type TBio = {
-  year: string;
-  description: string;
-};
-
 export type TContact = {
   name: string;
   username: string;

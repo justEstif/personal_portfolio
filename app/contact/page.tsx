@@ -35,13 +35,13 @@ const Page = () => {
     }).then((res) => {
       if (res.status === 200) {
         setStatus("success");
-        setForm(initialFormState);
+        setForm(() => initialFormState);
       } else {
         setStatus("error");
         return new Response(
           JSON.stringify({
             code: 400,
-            message: "Error", // TODO handle error
+            message: "Error",
           })
         );
       }

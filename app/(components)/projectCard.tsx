@@ -6,7 +6,7 @@ import { nanoid } from "nanoid";
 
 function ProjectCard({ title, description, img, techs, links }: TProjectCard) {
   return (
-    <div className="flex flex-col w-full border-l-4 sm:flex-row border-l-blue-600">
+    <div className="flex flex-col w-full border-l-4 sm:flex-row">
       <div className="overflow-hidden relative flex-1 w-full h-10 sm:h-64 bg-black/50 group dark:bg-white/50">
         <Image
           src={img.src}
