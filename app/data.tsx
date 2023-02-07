@@ -1,6 +1,5 @@
 import {
   SiGithub,
-  SiDiscord,
   SiGmail,
   SiArchlinux,
   SiCss3,
@@ -22,6 +21,7 @@ import {
   SiChakraui,
   SiFirebase,
   SiReactrouter,
+  SiDocusign,
 } from "react-icons/si";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import {
@@ -73,6 +73,12 @@ export const greetings: TGreetings = {
  */
 export const contacts: TContact[] = [
   {
+    name: "Resume",
+    username: "PDF Version",
+    link: "https://docs.google.com/document/d/1Sor8F-lVTe1fKXsGhptD9Hqi3_W31U6kORfLliCpmOA/export?format=pdf",
+    icon: <SiDocusign />,
+  },
+  {
     name: "Email",
     username: "estifanosbeyene21@gmail.com",
     link: "mailto:estifanosbeyene21@gmail.com",
@@ -89,12 +95,6 @@ export const contacts: TContact[] = [
     username: "Estifanos Beyene",
     link: "https://www.linkedin.com/in/estifanos-beyene-62940b1bb/",
     icon: <SiLinkedin />,
-  },
-  {
-    name: "Discord",
-    username: "justCozz#4245",
-    link: "https://discord.com/users/justCozz#4245",
-    icon: <SiDiscord />,
   },
 ];
 
