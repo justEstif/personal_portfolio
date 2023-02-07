@@ -21,6 +21,7 @@ import {
   SiLinkedin,
   SiChakraui,
   SiFirebase,
+  SiReactrouter,
 } from "react-icons/si";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import {
@@ -202,7 +203,8 @@ export const allProjectCards: TProjectCard[] = [
     },
     techs: [
       <SiReact className="w-6 h-6" key={nanoid()} />,
-      <SiNextdotjs className="w-6 h-6" key={nanoid()} />,
+      <SiVite className="w-6 h-6" key={nanoid()} />,
+      <SiReactrouter className="w-6 h-6" key={nanoid()} />,
       <SiFirebase className="w-6 h-6" key={nanoid()} />,
       <SiTailwindcss className="w-6 h-6" key={nanoid()} />,
     ],
