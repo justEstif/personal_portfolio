@@ -28,15 +28,6 @@ function Greetings() {
           <FaEnvelope className="animate-bounce group-hover:animate-pulse" />
         </Link>
       </div>
-
-      <div className="overflow-hidden relative w-full h-64">
-        <Image
-          src={greetings.img.src}
-          alt={greetings.img.alt}
-          fill={true}
-          className="block object-contain w-full"
-        />
-      </div>
     </div>
   );
 }
