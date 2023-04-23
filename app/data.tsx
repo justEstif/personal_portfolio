@@ -75,7 +75,7 @@ export const contacts: TContact[] = [
   {
     name: "Resume",
     username: "PDF Version",
-    link: "https://docs.google.com/document/d/1Sor8F-lVTe1fKXsGhptD9Hqi3_W31U6kORfLliCpmOA/export?format=pdf",
+    link: "https://estifanos-resume.tiiny.site/",
     icon: <SiDocusign />,
   },
   {
