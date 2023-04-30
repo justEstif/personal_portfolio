@@ -22,6 +22,8 @@ import {
   SiFirebase,
   SiReactrouter,
   SiDocusign,
+  SiSvelte,
+  SiVercel,
 } from "react-icons/si";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import {
@@ -155,6 +157,29 @@ export const allProjectCards: TProjectCard[] = [
       <SiReact className="w-6 h-6" key={nanoid()} />,
       <SiTypescript className="w-6 h-6" key={nanoid()} />,
       <SiVite className="w-6 h-6" key={nanoid()} />,
+    ],
+  },
+  {
+    title: "Sveltekit-Blog",
+    description: "A static blog website made using sveltekit",
+    links: [
+      {
+        link: "https://sveltekit-blog-ve52c25mh-justestif.vercel.app/",
+        icon: <FaExternalLinkAlt className="w-5 h-5" />,
+      },
+      {
+        link: "https://github.com/justEstif/sveltekit_blog",
+        icon: <SiGithub className="w-5 h-5" />,
+      },
+    ],
+    img: {
+      src: "/projects/sveltekit-blog.png",
+      alt: "Screenshot of sveltekit blog",
+    },
+    techs: [
+      <SiSvelte className="w-6 h-6" key={nanoid()} />,
+      <SiTypescript className="w-6 h-6" key={nanoid()} />,
+      <SiVercel className="w-6 h-6" key={nanoid()} />,
     ],
   },
   {
